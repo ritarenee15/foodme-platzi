@@ -2,6 +2,40 @@
  * general purpose css-only components  *
  ****************************************/
 
+@font-face {
+  font-family: 'Mona-Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Mona-Sans'), url(Mona-Sans-Regular.ttf) format('truetype');
+}
+
+* {
+  font-family: 'Mona-Sans', sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+input,button {
+  font-family: 'Mona-Sans', sans-serif!important;
+}
+
+input,select {
+  border: none!important;
+  border-bottom: 1px solid #727272!important;
+  border-radius: 0!important;
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+  -webkit-transition: none!important;
+  -moz-transition: none!important;
+  -o-transition: none!important;
+  transition: none!important;
+}
+
 .fm-panel {
   background-color: #fff;
 
@@ -108,10 +142,17 @@ input.ng-invalid.ng-dirty {
 
 .fm-customer-bkg {
   background-image: url(../img/customer_bkg.jpg);
-  opacity: 0.4;
-  height: 705px;
+  opacity: 0.8;
+  height: 640px;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 640px;
+}
 
 /* restaurant list */
 
@@ -243,4 +284,41 @@ input.ng-invalid.ng-dirty {
 
 input.ng-invalid {
   border: 1px solid red;
+}
+
+/* navbar */
+.navigation-bar {
+  background-color: #030401;
+  min-height: 40px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 7px;
+}
+
+.navbar .brand { 
+  color: white !important;
+  margin-top: -5px;
+}
+
+.navbar .nav>li>a {
+  color: white !important;
+  text-shadow: none!important;
+  transition: all 100ms ease-in;
+  border-radius: 8px;
+}
+
+.navbar .nav>.active>a,
+.navbar .nav>.active>a:hover,
+.navbar .nav>.active>a:focus {
+  color: #000000 !important;
+  border-radius: 8px;
+}
+
+.container-fluid {
+  padding: 0!important;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
 }
