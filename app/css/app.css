@@ -96,7 +96,7 @@ ul.fm-rating {
 }
 
 .fm-rating .fm-selected {
-  color: #000000;
+  color: #70B943;
 }
 
 .fm-rating .fm-hover {
@@ -118,8 +118,12 @@ fm-rating:hover a {
 
 
 .fm-deliver-to {
-  display: block;
-  width: 450px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 940px;
+  padding: 0!important;
+  margin-bottom: 50px!important;
 }
 
 
@@ -296,8 +300,9 @@ input.ng-invalid {
 }
 
 .navbar .brand { 
-  color: white !important;
+  color: #70B943 !important;
   margin-top: -5px;
+  text-shadow: 0 1px 0 #70B943!important;
 }
 
 .navbar .nav>li>a {
@@ -321,4 +326,44 @@ input.ng-invalid {
 .logo {
   width: 35px;
   height: 35px;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  gap: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.40);
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.40);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.40);
+  transition: all 0.2s ease-in-out;
+  > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none!important;
+    color: #000000;
+    font-size: 1em;
+    &:hover {
+      color: #70B943;
+    }
+  }
+  > .rating {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
 }
