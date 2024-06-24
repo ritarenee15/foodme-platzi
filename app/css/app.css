@@ -487,3 +487,13 @@ h5.name {
   font-size: 8px;
   margin-top: 15px;
 }
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  >.courier-gif {
+    width: 260px;
+  }
+}
+
