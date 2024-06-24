@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 exports.config = {
-  app_name: ["FoodMe-App"],
+  app_name: ["FoodMe-App-V2"],
   license_key: process.env.LICENSE_KEY,
   logging: { level: "info" },
   allow_all_headers: true,
