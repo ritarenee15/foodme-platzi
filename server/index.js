@@ -69,6 +69,11 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
       orderTotal += item.price * item.qty;
     });
     
+    newrelic.instrumentLoadedModule(
+      'express',
+      express
+    );
+
     newrelic.addCustomAttributes({
       'customer': order.deliverTo.name,
       'restaurant': order.restaurant.name,
