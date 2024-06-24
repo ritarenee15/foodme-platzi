@@ -1,5 +1,5 @@
 // Uncomment after adding New Relic agent to project
-// const newrelic = require('newrelic');
+const newrelic = require('newrelic');
 
 const express = require('express');
 const logger = require('pino')();
@@ -60,6 +60,11 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
 
   app.post(API_URL_ORDER, jsonParser, function(req, res, next) {
     logger.info(req.body, 'checkout');
+
+    // Exclude American Express card acceptance
+    if (req.body.payment && req.body.payment.cardType === 'American Express') {
+      return res.status(400).send({error: 'American Express cards are not accepted.'});
+    }
 
     /*************************************
     /*         Custom attributes         *
