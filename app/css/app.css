@@ -5,7 +5,7 @@
 .fm-panel {
   background-color: #fff;
 
-  border: 1px solid black;
+  border: 1px solid #000;
 
   -webkit-border-top-left-radius: 3px;
   -moz-border-radius-topleft: 3px;
