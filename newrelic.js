@@ -1,8 +1,9 @@
+require("dotenv").config();
+
 "use strict";
 exports.config = {
   app_name: ["FoodMe"],
-  license_key:
-    process.env.LICENSE_KEY,
+  license_key: process.env.LICENSE_KEY,
   logging: { level: "info" },
   allow_all_headers: true,
   attributes: {
