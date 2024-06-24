@@ -16,7 +16,7 @@
   ],
   "main": "server/start.js",
   "scripts": {
-    "start": "node server/start.js"
+    "start": "node -r newrelic server/start.js"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
