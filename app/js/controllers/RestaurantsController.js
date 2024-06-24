@@ -84,7 +84,8 @@ foodMeApp.controller('RestaurantsController',
     mexican: 'Mexican',
     pizza: 'Pizza',
     thai: 'Thai',
-    vegetarian: 'Vegetarian'
+    vegetarian: 'Vegetarian',
+    colombian: 'Colombian',
   };
 
 });

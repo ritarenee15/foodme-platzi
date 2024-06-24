@@ -353,6 +353,7 @@ input.ng-invalid {
     text-decoration: none!important;
     color: #000000;
     font-size: 1em;
+    transition: all 0.2s ease-in-out;
     &:hover {
       color: #70B943;
     }
