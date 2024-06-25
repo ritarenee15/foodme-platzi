@@ -1,7 +1,7 @@
 <fm-deliver-to></fm-deliver-to>
 
 
-<div class="container fm-restaurant">
+<div class="container fm-restaurant bg-gray-100 rounded-lg shadow-md p-4">
 
   <div class="row">
     <div class="span2">
@@ -9,18 +9,18 @@
     </div>
 
     <div class="span10">
-      <h3>{{restaurant.name}}</h3>
+      <h3 class="font-sans text-lg text-gray-800">{{restaurant.name}}</h3>
 
       <div class="row">
         <div class="span2">
-          <div>{{restaurant.address}}</div>
+          <div class="font-sans text-md text-gray-800">{{restaurant.address}}</div>
 
           <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
           <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true"></fm-rating>
 
         </div>
         <div class="span4">
-          <div>{{restaurant.description}}</div>
+          <div class="font-sans text-md text-gray-800">{{restaurant.description}}</div>
         </div>
       </div>
     </div>
@@ -30,15 +30,15 @@
 
 <div class="row-fluid">
 
-  <div class="span8 fm-panel fm-menu-list">
-    <h4>Menu</h4>
+  <div class="span8 fm-panel fm-menu-list bg-gray-100 rounded-lg shadow-md p-4">
+    <h4 class="font-sans text-lg text-gray-800">Menu</h4>
 
 
     <ul>
-      <li ng-repeat="menuItem in restaurant.menuItems">
-        <a href ng-click="cart.add(menuItem, restaurant)">
-          <span>{{menuItem.name}}</span>
-          <span>{{menuItem.price}}</span>
+      <li ng-repeat="menuItem in restaurant.menuItems" class="hover:bg-gray-200">
+        <a href ng-click="cart.add(menuItem, restaurant)" class="flex justify-between items-center">
+          <span class="font-sans text-md text-gray-800">{{menuItem.name}}</span>
+          <span class="font-sans text-md text-gray-800">{{menuItem.price}}</span>
           <i class="icon-plus-sign"></i>
         </a>
       </li>
@@ -46,11 +46,11 @@
 
   </div>
 
-  <div class="span4 fm-panel fm-cart">
-    <h4>Your order</h4>
+  <div class="span4 fm-panel fm-cart bg-gray-100 rounded-lg shadow-md p-4">
+    <h4 class="font-sans text-lg text-gray-800">Your order</h4>
     <form>
       <ul class="unstyled">
-        <li ng-repeat="item in cart.items">
+        <li ng-repeat="item in cart.items" class="hover:bg-gray-200">
           <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
           {{item.qty}} &times; {{item.name}}
         </li>

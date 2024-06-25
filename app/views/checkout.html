@@ -1,18 +1,18 @@
 <form name="form">
-  <div class="container fm-panel fm-checkout">
-    <h4>Menu</h4>
+  <div class="container fm-panel fm-checkout bg-gray-100 rounded-lg shadow-md p-4">
+    <h4 class="font-sans text-lg text-gray-800">Menu</h4>
 
     <div class="row">
       <div class="span6">
-        <h5>Deliver To:</h5>
-        <div>{{customer.name}}</div>
-        <div>{{customer.address}}</div>
-        <a href="#/customer">Change</a>
+        <h5 class="font-sans text-md text-gray-800">Deliver To:</h5>
+        <div class="font-sans text-md text-gray-800">{{customer.name}}</div>
+        <div class="font-sans text-md text-gray-800">{{customer.address}}</div>
+        <a href="#/customer" class="text-blue-500 hover:text-blue-700">Change</a>
       </div>
       <div class="span6">
-        <h5>Payment:</h5>
+        <h5 class="font-sans text-md text-gray-800">Payment:</h5>
         <div class="control-group">
-          <select name="ccType" class="input-medium"
+          <select name="ccType" class="input-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   required
                   ng-model="cart.payment.type">
             <option value="visa">Visa</option>
@@ -25,16 +25,17 @@
                  placeholder="Card number"
                  maxlength="16"
                  required ng-pattern="/\d{16}/"
-                 ng-model="cart.payment.number">
+                 ng-model="cart.payment.number"
+                 class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
         </div>
         <span class="control-group">
-          <input type="text" name="ccExp" placeholder="mm/yyyy" class="input-medium"
+          <input type="text" name="ccExp" placeholder="mm/yyyy" class="input-medium bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                  maxlength="16"
                  required ng-pattern="/\d\d\/\d\d\d\d/"
                  ng-model="cart.payment.expire">
         </span>
         <span class="control-group">
-          <input type="text" name="ccCvc" placeholder="CVC" class="input-small"
+          <input type="text" name="ccCvc" placeholder="CVC" class="input-small bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                  maxlength="4"
                  required ng-pattern="/\d{3,4}/"
                  ng-model="cart.payment.cvc">
@@ -68,9 +69,9 @@
       </table>
 
       <div class="fm-right">
-        <a href="#/menu/{{restaurantId}}" class="btn">Back to Menu</a>
-        <a href class="btn btn-danger" ng-click="cart.reset()">Clear Cart</a>
-        <button class="btn btn-primary"
+        <a href="#/menu/{{restaurantId}}" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back to Menu</a>
+        <a href class="btn bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" ng-click="cart.reset()">Clear Cart</a>
+        <button class="btn bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                 ng-disabled="form.$invalid || !cart.items.length || submitting"
                 ng-click="purchase()">Purchase</button>
       </div>
