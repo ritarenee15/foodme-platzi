@@ -1,6 +1,4 @@
-// Uncomment after adding New Relic agent to project
 const newrelic = require('newrelic');
-
 const express = require('express');
 const logger = require('pino')();
 const morgan = require('morgan');
