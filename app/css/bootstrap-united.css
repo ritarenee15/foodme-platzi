@@ -1,4 +1,4 @@
-@import url(Ubuntu.font);
+@import url(HubotSans.font);
 /*!
  * Bootstrap v2.2.1
  *
@@ -145,11 +145,11 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: 'Ubuntu', Tahoma, sans-serif;
+  font-family: 'HubotSans', Tahoma, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
-  background-color: #ffffff;
+  color: #000000;
+  background-color: #8a0c36;
 }
 a {
   color: #dd4814;
@@ -796,7 +796,7 @@ input,
 button,
 select,
 textarea {
-  font-family: 'Ubuntu', Tahoma, sans-serif;
+  font-family: 'HubotSans', Tahoma, sans-serif;
 }
 label {
   display: block;
@@ -3503,15 +3503,15 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #d44413;
+  background-color: #da33d3;
   background-image: -moz-linear-gradient(top, #ce4213, #dd4814);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ce4213), to(#dd4814));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f0f0f0), to(#61129b));
   background-image: -webkit-linear-gradient(top, #ce4213, #dd4814);
   background-image: -o-linear-gradient(top, #ce4213, #dd4814);
-  background-image: linear-gradient(to bottom, #ce4213, #dd4814);
+  background-image: linear-gradient(to bottom, #eb00ff, #0d997f);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce4213', endColorstr='#ffdd4814', GradientType=0);
-  border: 1px solid #c64012;
+  border: 1px solid #00ffea;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3622,7 +3622,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: 'Ubuntu', Tahoma, sans-serif;
+  font-family: 'HubotSans', Tahoma, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;

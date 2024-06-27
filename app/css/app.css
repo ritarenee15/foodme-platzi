@@ -3,9 +3,9 @@
  ****************************************/
 
 .fm-panel {
-  background-color: #fff;
+  background-color: #8185b3b8;
 
-  border: 1px solid black;
+  border: 1px solid #000;
 
   -webkit-border-top-left-radius: 3px;
   -moz-border-radius-topleft: 3px;
@@ -22,7 +22,7 @@
 }
 
 .fm-panel > h4 {
-  background-color: #E5E5E5;
+  background-color: #5df806;
   margin: -10px -10px 10px -10px;
   padding: 10px 10px 10px 10px;
 }
