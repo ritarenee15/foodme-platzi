@@ -16,6 +16,8 @@ Remember: This challenge is meant for developers of all levels, and some of the 
 - You must instrument your application with New Relic using the Browser Monitoring Guided Install and the Node.js Guided Install.
 
 ## Run the application
+`npm install`
+
 `npm run start`
 
 ## Stop the application
