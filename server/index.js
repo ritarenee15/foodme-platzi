@@ -109,7 +109,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
     return res.send(400, {error: errors});
   });
 
-  app.del(API_URL_ID, function(req, res, next) {
+  app.delete(API_URL_ID, function(req, res, next) {
     if (storage.deleteById(req.params.id)) {
       return res.send(204, null);
     }
