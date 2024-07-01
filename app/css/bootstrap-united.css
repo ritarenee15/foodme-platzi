@@ -1,4 +1,4 @@
-@import url(Ubuntu.font);
+
 /*!
  * Bootstrap v2.2.1
  *
@@ -100,6 +100,7 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 input[type="search"] {
@@ -107,6 +108,7 @@ input[type="search"] {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   -webkit-appearance: textfield;
+  appearance: textfield;
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
@@ -145,7 +147,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: 'Ubuntu', Tahoma, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -2515,6 +2517,7 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+  appearance: none;
 }
 .btn {
   display: inline-block;
@@ -2526,7 +2529,7 @@ button.close {
   margin-bottom: 0;
   font-size: 14px;
   line-height: 20px;
-  *line-height: 20px;
+  line-height: 20px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
