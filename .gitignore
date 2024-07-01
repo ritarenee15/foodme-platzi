@@ -8,5 +8,9 @@ build.xml
 .idea/*
 .vs
 .vscode/*
+
+.env
+
+
 package-lock.json
 node_modules/

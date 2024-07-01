@@ -21,13 +21,14 @@
   "dependencies": {
     "body-parser": "^1.20.0",
     "csv": ">=0.2.1",
+    "dotenv": "^16.4.5",
     "express": ">=3.0.0",
     "morgan": "^1.10.0",
     "open": "^8.4.2",
     "pino": "^8.7.0"
   },
-  "engines" : { 
-    "node": ">=20.14.0" 
+  "engines": {
+    "node": ">=20.14.0"
   },
   "license": "MIT"
 }
