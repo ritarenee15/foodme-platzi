@@ -1,64 +1,72 @@
-<fm-deliver-to></fm-deliver-to>
+<head>
 
+  <link rel="stylesheet" type="text/css" href="../css/restaurants/styles.css">
 
-<div class="row-fluid">
+</head>
 
-  <div class="span3 fm-panel">
-    <h4>Filter Restaurants</h4>
+<body>
+  <fm-deliver-to></fm-deliver-to>
+  <div class="container">
+    <div class="row">
 
-    <form>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">What are you craving today?</h4>
 
-      <h5>Rating</h5>
+            <form>
 
-      <fm-rating ng-model="$parent.filter.rating"></fm-rating>
+              <h5>Rating</h5>
+              <fm-rating ng-model="$parent.filter.rating"></fm-rating>
 
+              <h5>Price</h5>
+              <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
 
-      <h5>Price</h5>
-
-      <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
-
-
-      <h5>Cuisine</h5>
-
-      <div fm-checkbox-list ng-model="filter.cuisine">
-        <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
-          <input type="checkbox" value="{{name}}"> {{title}}
-        </label>
+              <h5>Cuisine</h5>
+              <div fm-checkbox-list ng-model="filter.cuisine">
+                <div class="form-check" ng-repeat="(name, title) in CUISINE_OPTIONS">
+                  <input class="form-check-input" type="checkbox" value="{{name}}">
+                  <label class="form-check-label">
+                    {{CUISINE_EMOJIS[name]}} {{CUISINE_OPTIONS[name]}}
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </form>
-  </div>
 
-
-  <div class="span9 fm-panel fm-restaurant-list">
-    <h4>
-      <ng-pluralize count="restaurants.length"
-                    when="{'0'    : 'No restaurants found. :-(',
-                           'one'  : '1 restaurant found!',
-                           'other': '{} restaurants found!'}">
-      </ng-pluralize>
-    </h4>
-
-    <table class="table table-hover table-striped">
-      <tr>
-        <th><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
-        <th><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
-        <th><a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
-      </tr>
-      <tr ng-repeat="restaurant in restaurants">
-        <td>
-          <a href="#/menu/{{restaurant.id}}">
-            <img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">
-            <b>{{restaurant.name}}</b>
-          </a>
-          <p>{{restaurant.description}}</p>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
-        </td>
-      </tr>
-    </table>
-  </div>
-</div>
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              <ng-pluralize count="restaurants.length" when="{'0'    : 'No restaurants found. :-(',
+                                         'one'  : '1 restaurant found!',
+                                         'other': '{} restaurants found!'}">
+              </ng-pluralize>
+            </h4>
+            <div class="row">
+              <div class="col-md-4" ng-repeat="restaurant in restaurants">
+                <div class="restaurant-card">
+                  <a href="#/menu/{{restaurant.id}}">
+                    <img class="rounded float-left" ng-src="img/restaurants/{{restaurant.id}}.png">
+                    <div class="container">
+                      <h4><b>{{restaurant.name}}</b></h4>
+                      <div class="price-rating-icon">
+                        <div class="price">
+                          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true"></fm-rating>
+                        </div>
+                        <div class="rating">
+                          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
+                        </div>
+                        <img class="icon" ng-src="../../img/logo.png"> 
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>

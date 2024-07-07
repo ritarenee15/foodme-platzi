@@ -84,22 +84,22 @@ chinese,Sweet and sour pork,6.95
 chinese,Walnut prawns,4.95
 chinese,Wonton Soup,6.25
 chinese,Young Chow fried rice,6.45
-czech/slovak,Apple strudel,6.95
-czech/slovak,Apricot dumpling with yogurt topping ,3.95
-czech/slovak,Balkánský Salad,3.95
-czech/slovak,Beef goulash,8.95
-czech/slovak,Chicken breast fillet schnitzel ,10.45
-czech/slovak,Cucumber Salad,7.55
-czech/slovak,Dumplings,5.95
-czech/slovak,Fried goose liver with onion and bread,7.55
-czech/slovak,Halusky with sauerkraut and belly bacon ,9.95
-czech/slovak,Lentil soup,4.5
-czech/slovak,Pickles with cabbage and cheddar,10.45
-czech/slovak,Pork schnitzel,3.95
-czech/slovak,Potato pancake with bacon,5.95
-czech/slovak,Potato Salad,4.55
-czech/slovak,Segedínský gulash and dumplings,6.95
-czech/slovak,Sour cabbage soup,10.45
+czechslovak,Apple strudel,6.95
+czechslovak,Apricot dumpling with yogurt topping,3.95
+czechslovak,Balkánský Salad,3.95
+czechslovak,Beef goulash,8.95
+czechslovak,Chicken breast fillet schnitzel ,10.45
+czechslovak,Cucumber Salad,7.55
+czechslovak,Dumplings,5.95
+czechslovak,Fried goose liver with onion and bread,7.55
+czechslovak,Halusky with sauerkraut and belly bacon,9.95
+czechslovak,Lentil soup,4.5
+czechslovak,Pickles with cabbage and cheddar,10.45
+czechslovak,Pork schnitzel,3.95
+czechslovak,Potato pancake with bacon,5.95
+czechslovak,Potato Salad,4.55
+czechslovak,Segedínský gulash and dumplings,6.95
+czechslovak,Sour cabbage soup,10.45
 french,bavette dans son jus,4.95
 french,bœuf bourguignon ,18
 french,bouillabaisse,17.5
@@ -196,7 +196,7 @@ pizza,Chicago-style deep dish vegetarian,6.95
 pizza,Chicago-style meat lover's,8.95
 pizza,Chocolate cake,3.95
 pizza,Coffee,7.95
-pizza,Garlic bread,
+pizza,Garlic bread,3.95
 pizza,Greek salad,5.95
 pizza,Pizza of the day (slice),7.55
 pizza,Thin crust anchovy and garlic and chili pepper,5.95
@@ -239,3 +239,28 @@ vegetarian,toasted sandwich with grilled eggplant,8.95
 vegetarian,tofu chicken wrap,9.95
 vegetarian,tomato and cheese sandwich,11.45
 vegetarian,vegetable stew,5.95
+colombia,Arepa,3.95
+colombia,Bandeja Paisa,6.95
+colombia,Bunuelos,4.95
+colombia,Chicharron,4.95
+colombia,Chorizo,5.95
+colombia,Empanadas,3.95
+colombia,Lechona,7.95
+colombia,Pandebono,3.95
+colombia,Patacones,6.95
+colombia,Sancocho,15.95
+colombia,Sobrebarriga,15.95
+colombia,Sudado,15.95
+colombia,Tamales,8.95
+colombia,Arepa de Huevo,5.95
+colombia,Cafe,2.95
+colombia,Dessert Cien Años de Soledad,3.95
+colombia,Coffee Un Bel Morir,3.95
+colombia,Coffee Delirio,3.95
+colombia,Coffee Hot Sur,3.95
+colombia,Coffee Duermevela,3.95
+colombia,Pie Historia y Desencanto,5.95
+colombia,Chocolate Cake Pedro Páramo,7.95
+colombia,Cookies Risa del Cuervo,3.95
+colombia,Ice Cream El Olvido que Seremos,6.95
+

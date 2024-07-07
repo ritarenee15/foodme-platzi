@@ -1,0 +1,109 @@
+/* Styling for customer section */
+
+/* Background animation for customer background */
+.fm-customer-bkg {
+  animation: bgScroll 25s linear infinite;
+  background-image: url(../../img/empanada2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(2px); /* Applies a 2px blur effect to the background */
+  height: 100vh; /* Full viewport height */
+  opacity: 0.4; /* Sets background opacity to 40% */
+  position: relative;
+  width: 100%;
+}
+
+/* Styling for horizontal form container */
+.form-horizontal {
+  align-items: center; /* Centers elements horizontally */
+  background: none;
+  border-radius: 50%/0 0 50% 50%; /* Custom border radius */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Vertically aligns elements */
+  justify-content: center; /* Centers elements vertically */
+  left: 50%; /* Positioned at 50% from the left */
+  max-width: 500px; /* Maximum width of 500px */
+  padding: 30px; /* Padding inside the container */
+  position: absolute; /* Absolute positioning within its container */
+  top: 60%; /* Positioned at 60% from the top */
+  transform: translate(-50%, -50%); /* Centers the form horizontally and vertically */
+  width: 80%; /* Width of 80% of its container */
+}
+
+/* Primary button styling */
+.btn-primary {
+  background-color: #0a0909; /* Dark background color */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow */
+  color: #e6e6e6; /* Changes text color to light gray */
+  font-family: 'Arial Narrow', Arial, sans-serif; /* Font family */
+  padding: 10px 30px; /* Padding inside the button */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover state for primary button */
+.btn-primary:hover {
+  background-color: #FFAD73; /* Lighter background color on hover */
+}
+
+/* Disabled state for primary button */
+.btn-primary:disabled {
+  background-color: #000000; /* Dark background color when disabled */
+}
+
+/* Styling for modal title */
+.modal-title {
+  font-family: 'Six Caps', sans-serif; /* Font style for modal title */
+  font-size: 55px; /* Font size */
+}
+
+/* Styling for customer name */
+.customerName {
+  font-family: 'Archivo Narrow', sans-serif; /* Font style for customer name */
+  font-size: 20px; /* Font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Styling for form inputs */
+.form-control {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15); /* Adds a shadow effect */
+  font-family: 'Arial Narrow', Arial, sans-serif; /* Font family */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Focus state for form inputs */
+.form-control:focus {
+  background-color: #f0f8ff; /* Light blue background color on focus */
+}
+
+/* Styling for modal content */
+.modal-content {
+  background: transparent; /* Transparent background for modal content */
+  border: none; /* No border */
+  box-shadow: none; /* No box shadow */
+}
+
+/* Styling for modal footer */
+.modal-footer {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+}
+
+/* Font family for modal footer buttons and specific elements */
+.modal-footer .btn-primary,
+#customerName,
+#address,
+.btn-primary,
+::placeholder {
+  font-family: 'Archivo Narrow', sans-serif; /* Font family */
+}
+
+/* Styling for body background */
+body {
+  background-image: linear-gradient(to bottom, #FFAD73 0%, #FDFDFD 100%), url('../../img/deli.png'); /* Background gradient and image */
+  background-size: cover; /* Covers the entire background */
+  background-position: center; /* Centers the background image */
+}

@@ -1,0 +1,206 @@
+/* Global styles */
+body {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 20px;
+    color: #333; /* Darker text color for better contrast */
+    background-image: linear-gradient(to bottom, #FFAD73 0%, #FDFDFD 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Font uniformity for specific elements */
+body, span.product-name, h1, h2, h3, h4, h5, h6, .restaurant-description div, span.product-price, .fm-rating {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+/* Text color and font for titles and product names */
+span.product-name, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #000; /* Black text for titles and product names */
+}
+
+/* Panel styling */
+.fm-panel {
+    background-color: #E5E5E5; /* White background for panels */
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex layout for menu and restaurant sections */
+.fm-menu-list .row, .fm-restaurant .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Flex layout and styling for menu items */
+.fm-menu-list li, .fm-restaurant .row > div, .col-2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Styling for individual menu items */
+.fm-menu-list li {
+    flex: 0 1 calc(50% - 40px);
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease;
+    height: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .fm-restaurant .col-2 img {
+        width: 80px;
+    }
+    .restaurant-description div, span.product-price, .fm-rating {
+        font-size: 0.9em; /* Uniform font size for description, price, and rating */
+    }
+}
+
+/* Hover effect for menu items */
+.fm-menu-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling for menu items and product images */
+.fm-menu-list li img, .product-image {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Font size and line height for text elements */
+.fm-menu-list li span, .fm-restaurant .col-10 div {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Flex layout for restaurant description and rating sections */
+.restaurant-description, .ratings-price-container, .fm-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Adjustments for the checkout cart */
+.fm-cart {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 300px;
+    max-height: 80%;
+    overflow-y: auto;
+    z-index: 1050;
+}
+
+/* Styling for checkout button */
+.fm-cart .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List styling for cart items */
+.fm-cart ul.list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Styling for cart item list items */
+.fm-cart ul.list-unstyled li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Styling for product images in the cart */
+.fm-cart img.product-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Font size and color for cart item text */
+.fm-cart ul.list-unstyled li span {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Styling for delete item icon */
+.fm-cart i.icon-remove-sign {
+    cursor: pointer;
+    color: #ff0000;
+    margin-right: 5px;
+}
+
+/* Centering menu */
+.center-menu {
+    margin: 0 auto;
+    float: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Additional styling for restaurant section */
+.fm-restaurant .col-2 {
+    padding-right: 20px;
+}
+
+.restaurant-description {
+    margin-left: 20px;
+}
+
+.fm-restaurant .col-2 img {
+    width: 200px; /* Increased size from 150px to 200px */
+    height: auto;
+}
+
+.restaurant-description div {
+    font-size: 1em;
+}
+
+/* Font size and color for product price and rating */
+span.product-price, .fm-rating {
+    font-size: 1em;
+    color: #FFAD73; /* Updated color to #FFAD73 for emphasis */
+    font-weight: bold;
+}
+
+.fm-restaurant .col-2 h2 {
+    margin-top: 20px;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 30px;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-2 img {
+    order: 1;
+}
+
+.col-2 h2 {
+    order: 2;
+}

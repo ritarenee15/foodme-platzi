@@ -1,6 +1,35 @@
 /****************************************
  * general purpose css-only components  *
  ****************************************/
+ .navbar-brand {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 40px; /* Ajustado para mayor visibilidad */
+  margin-right: 20px; /* Añade espacio a la derecha del logo */
+}
+
+.nav-link {
+  font-size: 20px; /* Tamaño adecuado para legibilidad */
+  color: #FFFFFF; /* Cambia el color del texto para mayor contraste */
+  transition: color 0.3s ease; /* Suaviza la transición de color */
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #FFD700; /* Cambia el color al pasar el mouse o enfocar */
+}
+
+.nav-item {
+  font-family: 'Archivo Narrow', sans-serif;
+  margin-right: 15px; /* Añade espacio entre los elementos del navbar */
+}
+
+/* Mejora la visibilidad del botón del menú en dispositivos móviles */
+.navbar-toggler {
+  border-color: #FFD700; /* Cambia el color del borde del botón */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#FFD700' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); /* Cambia el color del ícono del menú */
+}
 
 .fm-panel {
   background-color: #fff;
@@ -30,6 +59,33 @@
 
 .fm-right {
   text-align: right;
+}
+/* Estilos para el campo de búsqueda */
+.form-control {
+  font-size: 16px; /* Aumenta la legibilidad */
+  padding: 10px 40px; /* Más espacio interior para un aspecto moderno y ampliado horizontalmente */
+  border-radius: 20px; /* Bordes redondeados para un look moderno */
+  border: none; /* Se quita el borde */
+}
+
+/* Estilos actualizados para el botón de búsqueda */
+.btn-outline-success {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 14px; /* Reducido para hacer el icono de lupa más pequeño */
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none; /* Se mantiene sin borde */
+  padding: 10px 20px; /* Ajuste del padding para igualar el campo de búsqueda */
+  border-radius: 20px; /* Bordes redondeados para coincidir con el campo de búsqueda */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición ajustada */
+}
+
+.btn-outline-success:hover, .btn-outline-success:focus {
+  color: #0a0a0a; /* Color más oscuro al pasar el mouse o enfocar */
+  background-color: #FFFFFF;
+}
+.bg-custom {
+  background-color: #FFAD73;
 }
 
 
@@ -96,123 +152,9 @@ input.ng-invalid.ng-dirty {
   box-shadow: 0 0 6px #F8B9B7;
 }
 
-
-
-
 /****************************************
  * route specific css                   *
  ****************************************/
-
-
-/* customer */
-
-.fm-customer-bkg {
-  background-image: url(../img/customer_bkg.jpg);
-  opacity: 0.4;
-  height: 705px;
-}
-
-
-/* restaurant list */
-
-.fm-restaurant-list {
-  min-height: 646px !important;
-}
-
-.fm-restaurant-list table {
-  margin: -10px -20px -20px -10px;
-  width: 700px;
-}
-
-.fm-restaurant-list th:first-child {
-  width: 500px;
-}
-
-.fm-restaurant-list th {
-  width: 100px;
-}
-
-.fm-restaurant-list img {
-  margin-right: 10px;
-  width: 100px;
-  height: 100px;
-}
-
-
-/* menu */
-
-.fm-restaurant  {
-  margin-bottom: 20px;
-}
-
-.fm-restaurant h3 {
-  margin-top: 0;
-}
-
-.fm-restaurant img {
-  width: 150px;
-  height: 150px;
-}
-
-.fm-restaurant .fm-rating {
-  display: block;
-}
-
-.fm-menu-list li {
-  list-style-type: none;
-}
-
-.fm-menu-list li span {
-  padding-right: 20px;
-}
-
-.fm-menu-list a {
-  color: inherit;
-}
-
-.fm-menu-list a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-.fm-menu-list .icon-plus-sign {
-  visibility: hidden;
-}
-
-.fm-menu-list li:hover .icon-plus-sign {
-  visibility: visible;
-}
-
-.fm-menu-list li:hover {
-  color: black;
-}
-
-.fm-menu-list ul li {
-  text-align: center;
-}
-
-.fm-cart li {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.fm-cart .icon-remove-sign {
-  visibility: hidden;
-}
-
-.fm-cart li:hover .icon-remove-sign {
-  visibility: visible;
-}
-
-.fm-cart form {
-  padding-left: 2px;
-}
-
-.fm-cart p {
-  padding-left: 20px;
-  padding-top: 5px;
-}
 
 
 /* checkout */

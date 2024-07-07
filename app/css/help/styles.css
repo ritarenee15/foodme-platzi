@@ -1,0 +1,74 @@
+/* Global styling for body and .fm-panel */
+body, .fm-panel {
+  font-family: 'Archivo Narrow', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Styling for panel cards */
+.fm-panel.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.fm-panel.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling within .fm-panel */
+.fm-panel .card-header {
+  background-color: #FDFDFD;
+  color: #333;
+  border-bottom: 3px solid #E6A067; /* Adjusted for better contrast */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 15px 20px;
+}
+
+/* Heading styles */
+.fm-panel h4, .fm-panel h5 {
+  color: #555; /* Darkened for better readability */
+}
+
+/* Ordered list styling */
+.fm-panel ol {
+  padding-left: 20px;
+}
+
+/* Paragraph and list item styling */
+.fm-panel p, .fm-panel li {
+  color: #333;
+  line-height: 1.6;
+}
+
+.fm-panel li {
+  margin-bottom: 5px;
+}
+
+/* Additional adjustments for readability and aesthetics */
+.fm-panel .card-body {
+  padding: 20px;
+}
+
+.fm-panel hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: #ddd; /* Softer color for lines */
+}
+
+/* Background styling for body */
+body {
+  background-image: linear-gradient(to bottom, #FFAD73 0%, #FDFDFD 100%), url('../../img/deli.png');
+  background-size: cover;
+  background-position: center;
+}

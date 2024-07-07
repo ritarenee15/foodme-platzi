@@ -1,0 +1,33 @@
+/* Sets the font family for the entire body */
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+  background-image: linear-gradient(to bottom, #FFAD73 0%, #FDFDFD 100%); /* Applies a gradient background from #FFAD73 to #FDFDFD */
+  background-size: cover; /* Ensures the background image covers the entire viewport */
+  background-position: center; /* Centers the background image */
+}
+
+/* Adds a box shadow effect on hover for elements with class 'fm-panel' and 'card' */
+.fm-panel.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the card header inside elements with class 'fm-panel' */
+.fm-panel .card-header {
+  color: #555; /* Sets the text color of the card header to #555 */
+}
+
+/* Styles paragraphs and list items inside elements with class 'fm-panel' */
+.fm-panel p, .fm-panel li {
+  color: #333; /* Sets the text color to #333 */
+  line-height: 1.6; /* Sets the line height to 1.6 times the font size */
+}
+
+/* Styles list items specifically */
+.fm-panel li {
+  margin-bottom: 5px; /* Adds margin bottom of 5px to each list item */
+}
+
+/* Styles horizontal ruler inside elements with class 'fm-panel' */
+.fm-panel hr {
+  border-color: #ddd; /* Sets the border color of the horizontal ruler to #ddd */
+}

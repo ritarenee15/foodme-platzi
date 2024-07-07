@@ -1,0 +1,115 @@
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+  position: relative;
+  margin: 0; /* Ensures no space around the body */
+  height: 100vh; /* Ensures body is at least viewport height */
+  overflow: hidden; /* Prevents overflow if content is larger than body */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../img/empanada2.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust this value to change background image opacity */
+  z-index: -1; /* Ensures background is behind content */
+}
+
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.confetti-piece {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: -10px;
+}
+
+.confetti-piece:nth-child(3n+1) {
+  background-color: #ffcc00; /* Yellow */
+  animation: confetti 1.2s linear infinite;
+}
+
+.confetti-piece:nth-child(3n+2) {
+  background-color: #ff4444; /* Red */
+  animation: confetti 1.5s linear infinite 0.2s;
+}
+
+.confetti-piece:nth-child(3n) {
+  background-color: #44ff44; /* Green */
+  animation: confetti 1.7s linear infinite 0.4s;
+}
+
+.confetti-piece:nth-child(4n+1) { left: calc(10% + 5vw); }
+.confetti-piece:nth-child(4n+2) { left: calc(30% + 5vw); }
+.confetti-piece:nth-child(4n+3) { left: calc(50% + 5vw); }
+.confetti-piece:nth-child(4n) { left: calc(70% + 5vw); }
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
+}
+
+.order-id-box {
+  background-color: #ffffff; /* Lighter background color */
+  border: 2px solid #FFAD73; /* Modern color border */
+  padding: 20px; /* Increased internal spacing */
+  display: inline-block; /* Fit to content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark text color for contrast */
+}
+
+.moving-logo {
+  position: fixed;
+  top: 60%; /* Adjust vertical position */
+  left: 0; /* Start from left edge */
+  width: 50px; /* Adjust according to actual logo size */
+  animation: moveLogo 90s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveLogo {
+  0% { left: 0; } /* Start from left edge */
+  50% { left: calc(100% - 50px); } /* Move to right edge, adjusting for logo width */
+  100% { left: 0; } /* Return to left edge */
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.hero-unit {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.moving-logo:hover {
+  transform: scale(1.1); /* Increase size */
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #FFAD73;
+  border-color: #FFAD73;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #FFAD73; /* Maintain background color on hover */
+  border-color: #FFAD73; /* Maintain border color on hover */
+}

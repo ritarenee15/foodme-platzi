@@ -1,7 +1,25 @@
-<div class="hero-unit">
-  <h1>Thank you for your order!</h1>
-
-  <p>Our chefs are getting your food ready. It will be on its way shortly.</p>
-
-  <p>Your order ID is {{orderId}}.</p>
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/thankyou/styles.css">
+</head>
+<div class="confetti">
+  <div class="confetti-piece"></div>
+  <div class="confetti-piece"></div>
+  <div class="confetti-piece"></div>
+  <div class="confetti-piece"></div>
+</div>
+<div class="container text-center my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="hero-unit narrow-text">
+        <h1>Thank you for your order!</h1>
+        <p>Our chefs are getting your food ready. It will be on its way shortly.</p>
+        <p class="order-id-box">Your order ID is {{orderId}}.</p>
+        <!-- Botón para volver al inicio -->
+        <a href="/" class="btn btn-primary">Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="moving-logo">
+  <img src="../img//truck.png" alt="Delivery Logo">
 </div>

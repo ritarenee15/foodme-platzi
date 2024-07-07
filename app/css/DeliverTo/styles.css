@@ -1,0 +1,24 @@
+/* Styles for the main container */
+.breadcrumb.fm-deliver-to {
+  background-color: #f8f9fa; /* Soft background color */
+  padding: 15px; /* Increased padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex; /* Convert container to flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Styles for the link */
+.breadcrumb.fm-deliver-to a {
+  color: #070300; /* Change link color to black */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin-left: auto; /* Push link to the right */
+  font-family: 'Archivo Narrow', sans-serif; /* Use Archivo Narrow font */
+}
+
+/* Change link color on hover */
+.breadcrumb.fm-deliver-to a:hover {
+  color: #0056b3; /* Darker color on hover */
+}

@@ -1,36 +1,36 @@
-<div class="fm-customer-bkg img-rounded">
-</div>
-
-<form class="form-horizontal" name="customerForm" novalidate>
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Get Started</h3>
-    </div>
-    <div class="modal-body">
-
-      <div class="control-group">
-        <label class="control-label" for="customerName">Your Name</label>
-        <div class="controls">
-          <input type="text" id="customerName" placeholder="Joe Black"
-                 class="input-medium"
-                 ng-model="customerName" required>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label class="control-label" for="address">Delivery Address</label>
-        <div class="controls">
-          <input type="text" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043"
-                 class="input-xlarge"
-                 ng-model="customerAddress" required>
-        </div>
-      </div>
-
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary"
-              ng-disabled="customerForm.$invalid"
-              ng-click="findRestaurants(customerName, customerAddress)">Find Restaurants!</button>
-    </div>
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/customers/styles.css">
+  <div class="fm-customer-bkg img-rounded" ng-style="img/restaurants/{{restaurant.id}}.png">
   </div>
-</form>
+  
+  <form class="form-horizontal" name="customerForm" novalidate>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">The hunger doesn't wait. Order now!</h5>
+        </div>
+        <div class="modal-body">
+  
+          <div class="form-group">
+            <label for="customerName">Your Name</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Joe Black"
+                   ng-model="customerName" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <input type="text" class="form-control" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043"
+                   ng-model="customerAddress" required>
+          </div>
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary"
+                  ng-disabled="customerForm.$invalid"
+                  ng-click="findRestaurants(customerName, customerAddress)">Find your next favorite meal!</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+</head>

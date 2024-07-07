@@ -1,0 +1,322 @@
+/* Restaurant List Styles */
+
+/* Body styles */
+body {
+  font-family: 'Archivo Narrow', sans-serif; /* Set font family */
+  color: #333; /* Set text color */
+}
+
+/* Flex container for rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sticky card in the left column */
+.col-md-3 .card {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Padding for columns */
+.col-md-3,
+.col-md-9 {
+  padding: 15px;
+}
+
+/* Scrollbar styles for filters */
+.col-md-3 .card::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar track */
+.col-md-3 .card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollbar handle */
+.col-md-3 .card::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Hover state for scrollbar handle */
+.col-md-3 .card::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Common card styles */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.9em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Form check alignment */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  font-size: 1.1em;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.table th {
+  text-transform: uppercase;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.table a {
+  color: #333;
+  text-decoration: none;
+}
+
+.table a:hover {
+  color: #FF6347;
+}
+
+/* Restaurant list margin adjustment */
+.fm-restaurant-list {
+  margin-left: 100px; /* Adjust as needed */
+}
+
+/* Restaurant list table specific styles */
+.fm-restaurant-list table {
+  margin: -10px -20px -20px -10px;
+  width: 700px;
+}
+
+.fm-restaurant-list th:first-child {
+  width: 500px;
+}
+
+.fm-restaurant-list th {
+  width: 100px;
+}
+
+.fm-restaurant-list img {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/* Restaurant card styles */
+.restaurant-card {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Restaurant card image styles */
+.restaurant-card img {
+  border-radius: 4px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Restaurant card title styles */
+.restaurant-card h4 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Rating and price styles */
+.restaurant-card .rating,
+.restaurant-card .price {
+  font-size: 14px;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* Rating and price icon styles */
+.restaurant-card .rating::before,
+.restaurant-card .price::before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Star icon for rating */
+.restaurant-card .rating::before {
+  content: "\2605";
+  font-size: 15px;
+  margin-right: 5px;
+  color: darkorange;
+}
+
+/* Dollar icon for price */
+.restaurant-card .price::before {
+  content: "\0024";
+  font-size: 15px;
+  color: green;
+}
+
+/* Price and rating icon alignment */
+.restaurant-card .price-rating-icon {
+  display: flex;
+  align-items: center;
+}
+
+.restaurant-card .price-rating-icon .icon {
+  width: 25px;
+  height: 20px;
+  margin-left: 5px;
+  animation: bounce 0.5s linear;
+  animation-iteration-count: 5;
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Restaurant Menu Styles */
+
+/* Margin for restaurant section */
+.fm-restaurant {
+  margin-bottom: 20px;
+}
+
+.fm-restaurant h3 {
+  margin-top: 0;
+}
+
+/* Image size for restaurant */
+.fm-restaurant img {
+  width: 150px;
+  height: 150px;
+}
+
+/* Rating styles for restaurant */
+.fm-restaurant .fm-rating {
+  display: block;
+}
+
+/* List style for menu items */
+.fm-menu-list li {
+  list-style-type: none;
+}
+
+/* Padding for menu item span */
+.fm-menu-list li span {
+  padding-right: 20px;
+}
+
+/* Link color for menu items */
+.fm-menu-list a {
+  color: inherit;
+}
+
+/* Hover state for menu items */
+.fm-menu-list a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Plus sign icon visibility */
+.fm-menu-list .icon-plus-sign {
+  visibility: hidden;
+}
+
+.fm-menu-list li:hover .icon-plus-sign {
+  visibility: visible;
+}
+
+/* Hover state color for menu items */
+.fm-menu-list li:hover {
+  color: black;
+}
+
+/* Text alignment for list items */
+.fm-menu-list ul li {
+  text-align: center;
+}
+
+/* Cart item ellipsis for overflow */
+.fm-cart li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Remove sign icon visibility */
+.fm-cart .icon-remove-sign {
+  visibility: hidden;
+}
+
+.fm-cart li:hover .icon-remove-sign {
+  visibility: visible;
+}
+
+/* Padding adjustment for cart form */
+.fm-cart form {
+  padding-left: 2px;
+}
+
+/* Paragraph padding for cart section */
+.fm-cart p {
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+/* Header 4 color */
+h4 {
+  color: #000000;
+}
