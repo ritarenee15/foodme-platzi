@@ -1,67 +1,190 @@
-<fm-deliver-to></fm-deliver-to>
-
-
-<div class="container fm-restaurant">
-
-  <div class="row">
-    <div class="span2">
-      <img src="img/restaurants/angular.jpg" class="img-rounded">
-    </div>
-
-    <div class="span10">
-      <h3>{{restaurant.name}}</h3>
-
-      <div class="row">
-        <div class="span2">
-          <div>{{restaurant.address}}</div>
-
-          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
-          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true"></fm-rating>
-
-        </div>
-        <div class="span4">
-          <div>{{restaurant.description}}</div>
-        </div>
+<div class="page_header element_to_stick">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-7 col-md-7 d-none d-md-block">
+        <fm-deliver-to></fm-deliver-to>
       </div>
     </div>
   </div>
 </div>
 
+<main style="transform: none;">
 
-<div class="row-fluid">
+  <div class="container margin_detail" style="transform: none;">
+    <div class="row" style="transform: none;">
+      <div class="col-lg-8">
+        <div class="detail_page_head clearfix">
 
-  <div class="span8 fm-panel fm-menu-list">
-    <h4>Menu</h4>
+          <div class="title">
+            <h1>{{restaurant.name}}</h1>
+            {{restaurant.location}}
+            <ul class="tags">
+              <li><a href>We Open at: {{restaurant.opens}}</a></li>
+              <li><a href>And Close before: {{restaurant.closes}}</a></li>
+              <li><a href>On days: {{restaurant.days}}</a></li>
+            </ul>
 
 
-    <ul>
-      <li ng-repeat="menuItem in restaurant.menuItems">
-        <a href ng-click="cart.add(menuItem, restaurant)">
-          <span>{{menuItem.name}}</span>
-          <span>{{menuItem.price}}</span>
-          <i class="icon-plus-sign"></i>
-        </a>
-      </li>
-    </ul>
+          </div>
+          <div class="rating">
+            <div class="score">
+              <span>Rating</span>
+              <strong>{{restaurant.rating}}</strong>
+            </div>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme carousel_1 magnific-gallery owl-loaded owl-drag">
 
-  </div>
 
-  <div class="span4 fm-panel fm-cart">
-    <h4>Your order</h4>
-    <form>
-      <ul class="unstyled">
-        <li ng-repeat="item in cart.items">
-          <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
-          {{item.qty}} &times; {{item.name}}
-        </li>
-      </ul>
-      <div class="pull-right" ng-show="cart.items.length">
-        <a href="#/checkout" ng-disabled="!cart.items.length" class="btn">Checkout</a>
+
+          <div class="owl-stage-outer">
+            <div class="owl-stage"
+              style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2488px;">
+              <div class="owl-item active" style="width: 829.328px;">
+                <div class="item">
+                  <img src="img/location_1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tabs_detail">
+
+
+          <div class="tab-content" role="tablist">
+            <div id="pane-A" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
+              <div class="card-header" role="tab" id="heading-A">
+                <h5>
+                  <a class="collapsed" data-bs-toggle="collapse" href="#collapse-A" aria-expanded="true"
+                    aria-controls="collapse-A">
+                    Menu
+                  </a>
+                </h5>
+              </div>
+              <div id="collapse-A" class="collapse" role="tabpanel" aria-labelledby="heading-A">
+                <div class="card-body info_content">
+                  <p>{{restaurant.long_description}}</p>
+
+                  <div class="add_bottom_25"></div>
+                  <h2>{{restaurant.name}} Menu</h2>
+
+                  <h3>Main Courses</h3>
+
+                  <table class="table table-striped cart-list">
+                    <thead>
+                      <tr>
+                        <th>
+                          Item
+                        </th>
+                        <th>
+                          Price
+                        </th>
+                        <th>
+                          Order
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="menuItem in restaurant.menuItems">
+                        <td class="d-md-flex align-items-center">
+                          <figure><img src="img/menu-thumb-5.jpg" data-src="img/menu-thumb-5.jpg" alt="thumb"
+                              class="lazy loaded" data-was-processed="true"></figure>
+                          <div class="flex-md-column">
+                            <h4>{{menuItem.name}}</h4>
+                            <p>
+                              {{menuItem.description}}
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <strong>{{menuItem.price}}</strong>
+                        </td>
+                        <td class="options">
+                          <a href ng-click="cart.add(menuItem, restaurant)"><i class="icon_plus_alt2"></i></a>
+                        </td>
+                    </tbody>
+                  </table>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p>
-        <b>Total: {{cart.total() | currency}}</b>
-      </p>
-    </form>
-  </div>
+      <!-- /col -->
 
-</div>
+      <div class="col-lg-4" id="sidebar_fixed"
+        style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+
+        <div class="theiaStickySidebar"
+          style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 1176.83px;">
+          <div class="box_booking">
+            <div class="head">
+              <h3>Order Summary</h3>
+
+            </div>
+
+            <div class="main">
+              <ul class="clearfix">
+                <li ng-repeat="item in cart.items">
+                  <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i>{{item.qty}} &times;
+                    {{item.name}}</a><span>{{item.qty*item.price | currency}}</span>
+                </li>
+
+              </ul>
+
+              <ul class="clearfix">
+
+
+                <li class="total">Total<span>{{cart.total() | currency}}</span></li>
+              </ul>
+              <div class="row opt_order" ng-show="cart.items.length">
+                <div class="col-6">
+                  <label class="container_radio">Delivery
+                    <input type="radio" value="option1" name="opt_order" checked="">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-6">
+                  <label class="container_radio">Take away
+                    <input type="radio" value="option1" name="opt_order">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="pull-right" ng-show="cart.items.length">
+
+                <a href="#/checkout" class="btn_1 full-width mb_5" ng-disabled="!cart.items.length"
+                  class="btn">Checkout</a>
+              </div>
+              <div class="text-center" ng-show="cart.items.length"><small>No money charged on this steps</small></div>
+            </div>
+          </div>
+
+          <div class="resize-sensor"
+            style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+            <div class="resize-sensor-expand"
+              style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+              <div
+                style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 437px; height: 976px;">
+              </div>
+            </div>
+            <div class="resize-sensor-shrink"
+              style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+              <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+
+</main>
+
+
+<script src="js/specific_detail.js"></script>

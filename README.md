@@ -1,5 +1,7 @@
 # Platzi Challenge - Food Delivery Service App
 
+COMPLETED
+
 ## The Task
 For the next 3 weeks, you'll be creating your very own food delivery application, using the FoodMe open source application.
 This application has been around for a long time, and looks like it needs some updates. Using your tech skills, you're going to be able to modernize this application and make it your ideal food delivery service app.
@@ -16,7 +18,15 @@ Remember: This challenge is meant for developers of all levels, and some of the 
 - You must instrument your application with New Relic using the Browser Monitoring Guided Install and the Node.js Guided Install.
 
 ## Run the application
+
+Local enviroment:
+`npm install`
+
 `npm run start`
+
+If you want to test it a while:
+`https://foodme-platzi-five.vercel.app/#/`
+
 
 ## Stop the application
 Press `Ctrl` + `C`

@@ -1,0 +1,33 @@
+
+
+<div class="container margin_60_40">
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <div class="sign_up">
+        <div class="head">
+          <div class="title">
+            <h3>Looking for Good Food?</h3>
+          </div>
+        </div>
+        <!-- /head -->
+        <div class="main">
+          <h6>Personal details</h6>
+          <div class="form-group">
+            <input class="form-control" id="customerName" placeholder="First and Last Name" for="customerName" ng-model="customerName" required>  
+            
+          </div>
+          <div class="form-group">
+            <input class="form-control" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043" class="input-xlarge" ng-model="customerAddress" required>
+            
+          </div>
+
+          <button class="btn btn-success full-width mb_5" ng-disabled="customerForm.$invalid" ng-click="findRestaurants(customerName, customerAddress)">Find Restaurants!</button>
+        </div>
+      </div>
+      <!-- /box_booking -->
+    </div>
+    <!-- /col -->
+
+  </div>
+  <!-- /row -->
+</div>

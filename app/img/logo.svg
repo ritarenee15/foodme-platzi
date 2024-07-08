@@ -1,0 +1,18 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 60" enable-background="new 0 0 200 60" xml:space="preserve">
+  <style type="text/css">
+    .st0{fill:#589442;}
+    .st1{fill:#333333;}
+    .st2{font-family:'Arial';}
+    .st3{font-size:40px;}
+  </style>
+  <g>
+    <path class="st0" d="M20,30 L40,50 L60,30 L40,10 Z" />
+    <circle class="st0" cx="40" cy="30" r="5" />
+    <path class="st0" d="M40,5 L45,15 L35,15 Z" />
+    <path class="st0" d="M40,55 L45,45 L35,45 Z" />
+    <path class="st0" d="M25,20 L35,30 L25,40 Z" />
+    <path class="st0" d="M55,20 L45,30 L55,40 Z" />
+  </g>
+  <text x="60" y="30" class="st1 st2 st3">FoodMe</text>
+  <text x="60" y="60" class="st1 st2 st3">Platzi</text>
+</svg>

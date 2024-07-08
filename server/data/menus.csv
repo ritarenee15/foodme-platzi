@@ -1,241 +1,278 @@
-Cuisine,Item Name,Price
-african,Dibi Lamb,8.25
-african,Doro Wat,5.95
-african,Grilled Chicken,4.95
-african,Grilled Fish,6.95
-african,Grilled Plantains in Spicy Peanut Sauce,7.95
-african,Lamb Mafe (Peanut Butter Stew),8.75
-african,Meat Pie,6
-african,Mechoui with Plantains,5.95
-african,Pepper Soup,9.95
-african,Piri-Piri Shrimp,11.45
-african,Suppa Kandja,3.95
-african,Thiou Boulette,6.95
-african,Thiou Curry with Chicken,7.95
-african,Thu Okra,6.95
-african,Yassa Chicken,8.95
-african,Yassa Lamb,8.25
-american,Buffalo wings,5.95
-american,California-style baked Tilapia with rice,6.95
-american,Cheeseburger and fries,4.55
-american,Cherry pie a la mode,4.95
-american,Chocolate milkshake,6.95
-american,Cobb salad,4.95
-american,Famous BLT on a kaiser roll with fries,4.95
-american,Firehouse chili,6.95
-american,Goat cheese and eggplant wrap (vegetarian),5.95
-american,Greek salad,6.95
-american,Grilled chicken sandwich,4.95
-american,Grilled sausage on a bun,6.95
-american,Housemade pot roast with seasonal vegetable,16.95
-american,Roast beef dip,11.45
-american,Roast chicken and mashed potatoes,7.55
-american,Soup of the day,8.95
-american,Spaghetti and meatballs,11.45
-barbecue,BBQ chicken,4.95
-barbecue,Beef ribs (full),9.95
-barbecue,Beef ribs (delux),10.45
-barbecue,Beef ribs (half),6.45
-barbecue,Beer,7.55
-barbecue,Coleslaw,8.95
-barbecue,Collards,9.95
-barbecue,Cornbread,11.45
-barbecue,Devilled eggs,4
-barbecue,German chocolate cake,5.95
-barbecue,Housemade chips,4
-barbecue,Hushpuppies,3.25
-barbecue,Mac and cheese,6
-barbecue,Pork ribs (half),6.95
-barbecue,Potato salad,3.95
-barbecue,Pulled pork sandwich on a soft roll,4.95
-barbecue,Riblets,10.45
-cafe,Apple pie,5.95
-cafe,B.L.T. and Avocado Sandwich,5.95
-cafe,Caesar salad,5.95
-cafe,Cappucino,3.95
-cafe,Cherry cheesecake,4.95
-cafe,Chocolate chip cookie,4.55
-cafe,Cobb salad,6.95
-cafe,Drip coffee,5.95
-cafe,Eggsalad Sandwich,3.95
-cafe,Espresso,6.95
-cafe,Greek salad,3.95
-cafe,Hot tea,2.5
-cafe,Iced tea,2.5
-cafe,Latte,4
-cafe,Mango and banana smoothie,3
-cafe,Orange juice,4.95
-cafe,Quiche of the day,6.95
-cafe,Turkey Sandwich,7.55
-chinese,Almond cookie,5.95
-chinese,Chicken and broccoli,9.95
-chinese,Chow mein,4.95
-chinese,Egg rolls (4),3.95
-chinese,General Tao's chicken,5.95
-chinese,Hot and Sour Soup,7.55
-chinese,Hunan dumplings,6.5
-chinese,Mongolian beef,6.95
-chinese,Pan-fried beef noodle,7.95
-chinese,Pea shoots with garlic,8.95
-chinese,Potstickers (6),6.95
-chinese,Seafood hotpot,4.95
-chinese,Steamed rice,5.95
-chinese,Sweet and sour pork,6.95
-chinese,Walnut prawns,4.95
-chinese,Wonton Soup,6.25
-chinese,Young Chow fried rice,6.45
-czech/slovak,Apple strudel,6.95
-czech/slovak,Apricot dumpling with yogurt topping ,3.95
-czech/slovak,Balkánský Salad,3.95
-czech/slovak,Beef goulash,8.95
-czech/slovak,Chicken breast fillet schnitzel ,10.45
-czech/slovak,Cucumber Salad,7.55
-czech/slovak,Dumplings,5.95
-czech/slovak,Fried goose liver with onion and bread,7.55
-czech/slovak,Halusky with sauerkraut and belly bacon ,9.95
-czech/slovak,Lentil soup,4.5
-czech/slovak,Pickles with cabbage and cheddar,10.45
-czech/slovak,Pork schnitzel,3.95
-czech/slovak,Potato pancake with bacon,5.95
-czech/slovak,Potato Salad,4.55
-czech/slovak,Segedínský gulash and dumplings,6.95
-czech/slovak,Sour cabbage soup,10.45
-french,bavette dans son jus,4.95
-french,bœuf bourguignon ,18
-french,bouillabaisse,17.5
-french,coq au vin,10.45
-french,frites aïoli ,
-french,moules et frites,3.95
-french,poulet au riesling,4.95
-french,quiche lorraine,7.95
-french,salade de chèvre chaud,5.95
-french,salade du midi,6.95
-french,salade niçoise,3.95
-french,sandwich croque-madame,3.95
-french,sandwich croque-monsieur,4.55
-french,soupe à l'oignon,9.95
-french,steak frites,5.95
-french,tarte pissaladière ,6.95
-french,tarte tatin,5.95
-german,Bockwurst Würstchen,4.95
-german,Bratwurst mit Brötchen und Sauerkraut,5.95
-german,Currywurst mit Brötchen,5.95
-german,Das Hausmannskost,11.45
-german,Fleishkas mit Kartoffelsalat,6.95
-german,Frankfurter Würstchen,9.95
-german,Französische Zwiebelsuppe mit Käse,10.45
-german,Frikadelle mit Brötchen,6.95
-german,Gebackener Camenbert,7.55
-german,Gemischter Salat,4.55
-german,Haus Salatteller,11.45
-german,Jaegerschnitzel,9.95
-german,Kaesepaetzle,6.95
-german,Kartoffel Reibekuchen mit Apfelmus,5.95
-german,Maultaschen mit Käse,7.95
-german,Sauerbraten,10.45
-german,Ungarische Gulaschsuppe mit Brötchen,3.95
-german,Wienerschnitzel,8.95
-german,Wurstsalad mit Bauernbrot,6.95
-indian,Aloo Gobi,5.95
-indian,Basmati rice,6.95
-indian,Butter Chicken,5.95
-indian,Chicken Korma,7.55
-indian,Chicken Tikka Masala,5.95
-indian,Gulab Jamun,8.95
-indian,Kheer,4.5
-indian,Lamb Asparagus,9.5
-indian,Lamb Vindaloo,7.95
-indian,Mix Grill Bombay,5.95
-indian,Mulligatawny soup,5.95
-indian,Murgh Chicken,3.95
-indian,Naan stuffed with spinach and lamb,4.55
-indian,Plain naan,5.95
-indian,Rogan Josh,5.95
-indian,Saag Paneer,5.95
-indian,Tandoori Chicken,4.95
-japanese,California roll,5.95
-japanese,Chicken teriyaki,5.95
-japanese,Edamame,6.95
-japanese,Futomaki roll,
-japanese,Green tea ice cream,6.95
-japanese,Kitsune Udon,9.5
-japanese,Miso soup,5.95
-japanese,Pork Katsu,5.95
-japanese,Salmon teriyaki,5.95
-japanese,Sashimi combo,6.95
-japanese,Spicy Yellowtail roll,7.55
-japanese,Sushi combo,4.55
-japanese,Teppa Maki,5.95
-japanese,Unagi Don,7.55
-japanese,Vegetable tempura,3.95
-japanese,Vegetarian sushi plate,6.95
-japanese,Wakame salad,4.95
-mexican,Beans and rice,7.95
-mexican,Beef burrito,6.95
-mexican,Birria,7.95
-mexican,Chicken burrito,11.45
-mexican,Chicken mole platter,5.95
-mexican,Chile relleno (meat),6.95
-mexican,Chile relleno (vegetarian),3.95
-mexican,Chips and guacamole,5.95
-mexican,Enchiladas,4.55
-mexican,Flan,7.95
-mexican,Jamaica Aqua Fresca,2.5
-mexican,Pork al pastor platter,5.95
-mexican,Sopa de albondigas,7.95
-mexican,Sopa de pollo,6.95
-mexican,Strawberry Aqua Fresca,3.95
-mexican,Super nachos with carne asada,5.95
-mexican,Tacos de la casa (3),4.95
-mexican,Vegetarian platter,4.55
-pizza,Cesar salad,5.95
-pizza,Cheesecake,6.95
-pizza,Chicago-style deep dish chicken and spinach,6.95
-pizza,Chicago-style deep dish pepperoni and cheese,7.95
-pizza,Chicago-style deep dish vegetarian,6.95
-pizza,Chicago-style meat lover's,8.95
-pizza,Chocolate cake,3.95
-pizza,Coffee,7.95
-pizza,Garlic bread,
-pizza,Greek salad,5.95
-pizza,Pizza of the day (slice),7.55
-pizza,Thin crust anchovy and garlic and chili pepper,5.95
-pizza,"Thin crust broccoli, chicken, and mozarella",3.95
-pizza,Thin crust margherita,4.55
-pizza,Thin crust pepperoni,6.95
-pizza,Thin crust quattro stagione,4.95
-pizza,Thin crust sausage and guanciale bacon,4.95
-thai,Basil duck with rice,4.55
-thai,Curry salmon,12.45
-thai,Egg rolls (4),5.95
-thai,Fried banana and ice cream,11.45
-thai,Green curry with chicken,3.95
-thai,Green curry with pork,4.55
-thai,Hot tea,2.5
-thai,Onion pancake,6.95
-thai,Pad See Ew,4.95
-thai,Pad Thai,6.95
-thai,Pumpkin curry,6.95
-thai,Red curry with chicken,8.95
-thai,Red curry with pork,9.95
-thai,Sticky rice with mango,6.95
-thai,Thai iced coffee,6.95
-thai,Thai iced tea,3.95
-thai,Tofu salad rolls,10.45
-vegetarian,bean and cheese burrito,6.95
-vegetarian,cheese tortellini in tomato sauce,3.95
-vegetarian,coffee,6.95
-vegetarian,falafel wrap with tabbouleh,4.95
-vegetarian,flourless chocolate cake,8.95
-vegetarian,garden fresh salad,6.5
-vegetarian,happy buddha stir fry,10.45
-vegetarian,hummus appetizer plate,8
-vegetarian,lentil burger,6
-vegetarian,lentil soup,4.5
-vegetarian,pasta with olives and marinated lemon,6.95
-vegetarian,spinach and cheese wrap,5.95
-vegetarian,tea,5.95
-vegetarian,toasted sandwich with grilled eggplant,8.95
-vegetarian,tofu chicken wrap,9.95
-vegetarian,tomato and cheese sandwich,11.45
-vegetarian,vegetable stew,5.95
+Cuisine,Item Name,Description,Price,Image
+african,Jollof Rice,Traditional West African rice dish with tomatoes and spices,12.50,100x100.gif
+african,Fufu with Egusi Soup,Pounded yam served with melon seed soup,14.50,100x100.gif
+african,Suya,Grilled spicy meat skewers with peanut sauce,11.99,100x100.gif
+african,Akara,"Deep-fried bean cakes, served with pepper sauce",8.50,100x100.gif
+african,Bunny Chow,"Hollowed-out bread filled with curry, a South African specialty",15.00,100x100.gif
+african,Maasai Beef Stew,Beef stew cooked with Maasai spices and vegetables,16.50,100x100.gif
+african,Sadza with Nyama,Traditional Zimbabwean maize porridge with meat,13.50,100x100.gif
+african,Piri Piri Chicken,Grilled chicken marinated in spicy Piri Piri sauce,13.99,100x100.gif
+african,Chakalaka,"Spicy vegetable relish, often served with bread or pap",10.50,100x100.gif
+african,Injera with Doro Wat,Ethiopian flatbread with spicy chicken stew,14.50,100x100.gif
+african,Bobotie,South African curried meatloaf with egg topping,12.50,100x100.gif
+african,Braaivleis,"Traditional South African barbecue, often featuring boerewors sausages",15.50,100x100.gif
+african,Pap en Vleis/Shisa Nyama,"Grilled meat served with maize porridge, a staple in Southern Africa",16.00,100x100.gif
+african,Maamou,"West African doughnut-like pastry, sweet and often flavored with spices",8.00,100x100.gif
+african,Koshari,"Egyptian dish of rice, lentils, pasta, and spicy tomato sauce",11.50,100x100.gif
+african,Pepper Soup,"Spicy broth with meat, fish, or chicken, a popular Nigerian dish",9.50,100x100.gif
+african,Mandazi,"East African fried dough similar to a doughnut, often served with tea",7.50,100x100.gif
+american,BBQ Ribs,Slow-cooked ribs with barbecue sauce,15.99,100x100.gif
+american,Cheeseburger,Classic beef burger with cheese,12.50,100x100.gif
+american,Chicken Wings,Crispy fried chicken wings with buffalo sauce,10.99,100x100.gif
+american,Macaroni and Cheese,Creamy macaroni pasta with cheddar cheese,9.50,100x100.gif
+american,Clam Chowder,New England-style creamy soup with clams,11.50,100x100.gif
+american,Apple Pie,Traditional American pie with apples and cinnamon,7.50,100x100.gif
+american,Pancakes,Fluffy pancakes served with maple syrup,8.00,100x100.gif
+american,Caesar Salad,"Fresh salad with romaine lettuce, croutons, Parmesan cheese, and Caesar dressing",10.00,100x100.gif
+american,Hot Dog,Classic hot dog with mustard and ketchup,6.50,100x100.gif
+american,Philly Cheesesteak,Grilled steak sandwich with melted cheese and onions,13.50,100x100.gif
+american,Fried Chicken,"Crispy fried chicken pieces, served with fries",12.00,100x100.gif
+american,Chocolate Chip Cookies,Freshly baked cookies with chocolate chips,5.50,100x100.gif
+american,Key Lime Pie,Tangy pie with key lime juice and graham cracker crust,8.50,100x100.gif
+american,Steak,Grilled steak served with vegetables and potatoes,18.00,100x100.gif
+american,Shrimp and Grits,Southern dish with shrimp and creamy grits,14.50,100x100.gif
+american,Cobb Salad,"Salad with mixed greens, avocado, bacon, chicken, eggs, and blue cheese",11.99,100x100.gif
+american,Chili Con Carne,"Spicy chili with beef, beans, and tomatoes",10.99,100x100.gif
+barbecue,Ribs,Slow-cooked ribs with barbecue sauce,17.99,100x100.gif
+barbecue,Pulled Pork,Succulent pulled pork with barbecue sauce,15.50,100x100.gif
+barbecue,Brisket,"Tender smoked brisket, served sliced or chopped",18.50,100x100.gif
+barbecue,Smoked Sausage,Grilled smoked sausage with barbecue sauce,13.00,100x100.gif
+barbecue,Barbecue Chicken,Grilled chicken basted with barbecue sauce,12.99,100x100.gif
+barbecue,Baked Beans,Sweet and tangy baked beans,5.50,100x100.gif
+barbecue,Coleslaw,Crunchy coleslaw with creamy dressing,4.50,100x100.gif
+barbecue,Cornbread,Traditional cornbread with butter,3.50,100x100.gif
+barbecue,Potato Salad,Creamy potato salad with herbs,6.00,100x100.gif
+barbecue,Grilled Corn on the Cob,Buttered and grilled corn on the cob,4.99,100x100.gif
+barbecue,Pulled Chicken,Savory pulled chicken with barbecue sauce,14.50,100x100.gif
+barbecue,Barbecue Ribs and Chicken Combo,Combination of ribs and barbecue chicken,19.99,100x100.gif
+barbecue,Barbecue Pork Sandwich,Pulled pork sandwich with barbecue sauce,11.99,100x100.gif
+barbecue,Smoked Turkey,Smoked turkey with barbecue seasoning,16.50,100x100.gif
+barbecue,Barbecue Beef Ribs,Beef ribs with smoky barbecue flavor,20.00,100x100.gif
+barbecue,Grilled Shrimp Skewers,Skewers of grilled shrimp with barbecue glaze,15.99,100x100.gif
+barbecue,Sweet Potato Fries,"Crispy sweet potato fries, served with dipping sauce",7.50,100x100.gif
+cafe,Cappuccino,Espresso topped with steamed milk foam,4.50,100x100.gif
+cafe,Croissant,"Buttery and flaky pastry, filled or plain",3.50,100x100.gif
+cafe,Avocado Toast,"Toasted bread with mashed avocado, tomatoes, and herbs",6.50,100x100.gif
+cafe,Chocolate Cake,Rich and decadent chocolate cake,7.50,100x100.gif
+cafe,Quiche Lorraine,"Quiche with bacon, cheese, and cream",8.50,100x100.gif
+cafe,Fruit Smoothie,Refreshing smoothie with mixed fruits and yogurt,5.50,100x100.gif
+cafe,Bagel with Cream Cheese,Toasted bagel with cream cheese,4.00,100x100.gif
+cafe,Croque Monsieur,Grilled ham and cheese sandwich,6.99,100x100.gif
+cafe,Green Salad,Fresh salad with mixed greens and vinaigrette,5.00,100x100.gif
+cafe,Blueberry Muffin,Moist muffin with blueberries,3.50,100x100.gif
+cafe,Latte,Espresso with steamed milk and a light layer of foam,5.00,100x100.gif
+cafe,Breakfast Burrito,"Burrito filled with eggs, sausage, cheese, and salsa",7.99,100x100.gif
+cafe,Chocolate Chip Scone,Buttery scone with chocolate chips,4.50,100x100.gif
+cafe,Banana Bread,Moist banana bread with walnuts,3.99,100x100.gif
+cafe,Vegetable Quiche,Quiche with assorted vegetables and cheese,8.00,100x100.gif
+cafe,Iced Tea,Refreshing iced tea with lemon,3.00,100x100.gif
+cafe,Egg Salad Sandwich,Sandwich with egg salad and lettuce,6.50,100x100.gif
+chinese,Kung Pao Chicken,Spicy stir-fried chicken with peanuts,13.50,100x100.gif
+chinese,Mapo Tofu,Spicy tofu and minced pork in a savory sauce,11.50,100x100.gif
+chinese,Peking Duck,Crispy duck with pancakes and hoisin sauce,18.99,100x100.gif
+chinese,Hot and Sour Soup,Spicy and tangy soup with mushrooms and tofu,9.50,100x100.gif
+chinese,Dumplings,Steamed or fried dumplings with pork and vegetables,10.99,100x100.gif
+chinese,General Tso's Chicken,Deep-fried chicken in a sweet and spicy sauce,12.99,100x100.gif
+chinese,Chow Mein,Stir-fried noodles with vegetables and choice of meat,11.00,100x100.gif
+chinese,Spring Rolls,Crispy rolls filled with vegetables and meat,8.50,100x100.gif
+chinese,Orange Chicken,Deep-fried chicken in a tangy orange sauce,12.50,100x100.gif
+chinese,Szechuan Beef,Spicy stir-fried beef with vegetables,14.50,100x100.gif
+chinese,Fried Rice,Stir-fried rice with vegetables and choice of meat,10.00,100x100.gif
+chinese,Braised Pork Belly,Tender pork belly slow-cooked in soy sauce,15.50,100x100.gif
+chinese,Scallion Pancakes,"Crispy pancakes with scallions, served with dipping sauce",7.50,100x100.gif
+chinese,Shrimp Stir Fry,Stir-fried shrimp with vegetables in a savory sauce,16.00,100x100.gif
+chinese,Beef Noodle Soup,Slow-cooked beef broth with noodles and beef slices,11.99,100x100.gif
+chinese,Mongolian Beef,Stir-fried beef with scallions and a savory brown sauce,14.99,100x100.gif
+chinese,Honey Sesame Chicken,Chicken stir-fried with honey and sesame seeds,13.00,100x100.gif
+czech/slovak,Svíčková na Smetaně,Traditional Czech beef sirloin in cream sauce,14.00,100x100.gif
+czech/slovak,Knedlíky s Vepřovým Knoedel,Traditional Czech dumplings with pork knuckle,12.50,100x100.gif
+czech/slovak,Halušky,Traditional Slovak potato dumplings with bryndza cheese and bacon,11.50,100x100.gif
+czech/slovak,Guláš,Hearty Czech beef goulash with dumplings,13.50,100x100.gif
+czech/slovak,Trdelník,Traditional Slovak rolled pastry with sugar and nuts,8.00,100x100.gif
+czech/slovak,Šopský Salát,"Traditional Czech/Slovak salad with cucumbers, tomatoes, peppers, and cheese",9.50,100x100.gif
+czech/slovak,Chlebíčky,Open-faced sandwiches with various toppings,10.00,100x100.gif
+czech/slovak,Velikonoční Beránek,Traditional Czech Easter lamb-shaped cake,7.50,100x100.gif
+czech/slovak,Palačinky,Thin Czech pancakes with various fillings,6.50,100x100.gif
+czech/slovak,Klobása,"Grilled Czech/Slovak sausage, served with mustard and bread",8.50,100x100.gif
+czech/slovak,Segedínský Guláš,Pork and sauerkraut stew with dumplings,12.00,100x100.gif
+czech/slovak,Medovník,Traditional Czech honey cake with layers of honey cream,10.99,100x100.gif
+czech/slovak,Pražská Šunka,"Traditional Prague ham, served with horseradish and bread",9.00,100x100.gif
+czech/slovak,Štrúdl,Traditional Slovak strudel with fruit or cheese filling,8.50,100x100.gif
+czech/slovak,Krůtí Maso s Knedlíky,Traditional Czech turkey with dumplings and cranberry sauce,13.99,100x100.gif
+czech/slovak,Česnečka,Garlic soup with croutons,9.50,100x100.gif
+czech/slovak,Kyselé Okurky,Traditional Czech/Slovak pickled cucumbers,5.50,100x100.gif
+german,Bratwurst,"Traditional German sausage, served with sauerkraut and mustard",10.50,100x100.gif
+german,Schnitzel,"Breaded and fried pork or veal cutlet, served with potatoes",13.50,100x100.gif
+german,Kartoffelsalat,Traditional German potato salad with vinegar and bacon,7.50,100x100.gif
+german,Sauerbraten,"Pot roast marinated in vinegar, served with red cabbage and dumplings",16.00,100x100.gif
+german,Bretzel,"Soft pretzel with salt, served with mustard",5.00,100x100.gif
+german,Käsespätzle,German egg noodles with cheese and onions,8.50,100x100.gif
+german,Weißwurst,"Traditional Bavarian white sausage, served with sweet mustard",9.00,100x100.gif
+german,Apfelstrudel,Traditional German apple strudel with vanilla sauce,7.00,100x100.gif
+german,Leberkäse,Bavarian meatloaf served with mustard and bread,9.50,100x100.gif
+german,Kohlrouladen,"Cabbage rolls stuffed with meat and rice, served with gravy",12.50,100x100.gif
+german,Spargelcremesuppe,Creamy asparagus soup,8.50,100x100.gif
+german,Rinderroulade,"Beef roulade with bacon, onions, and pickles, served with red cabbage",15.50,100x100.gif
+german,Grünkohl mit Pinkel,Kale stew with sausage and potatoes,10.99,100x100.gif
+german,Kaiserschmarrn,Shredded pancakes with powdered sugar and plum compote,9.50,100x100.gif
+german,Knödel,Dumplings served with gravy,10.00,100x100.gif
+german,Heringsalat,Herring salad with apples and onions,8.00,100x100.gif
+german,Forelle Müllerin,"Trout with lemon and parsley butter, served with potatoes",14.99,100x100.gif
+indian,Chicken Tikka Masala,Grilled chicken in a creamy tomato sauce,14.50,100x100.gif
+indian,Butter Chicken,Tandoori chicken in a rich buttery tomato sauce,15.50,100x100.gif
+indian,Pakora,"Deep-fried vegetable fritters, served with chutney",8.50,100x100.gif
+indian,Naan,Traditional Indian flatbread,5.00,100x100.gif
+indian,Rogan Josh,Spicy lamb stew with tomatoes and spices,16.50,100x100.gif
+indian,Samosa,Crispy pastry filled with spiced potatoes and peas,6.50,100x100.gif
+indian,Biryani,Flavorful rice dish with choice of meat and aromatic spices,17.00,100x100.gif
+indian,Palak Paneer,Creamy spinach curry with paneer cheese,12.50,100x100.gif
+indian,Tandoori Chicken,Marinated chicken grilled in a tandoor oven,13.99,100x100.gif
+indian,Dal Makhani,Creamy black lentil curry,9.50,100x100.gif
+indian,Mango Lassi,Refreshing yogurt drink with mango pulp,4.50,100x100.gif
+indian,Vada Pav,Spicy potato fritter sandwich,7.00,100x100.gif
+indian,Chana Masala,"Spicy chickpea curry, served with rice or naan",11.00,100x100.gif
+indian,Gulab Jamun,Sweet milk solids soaked in rose-flavored syrup,5.50,100x100.gif
+indian,Aloo Gobi,Stir-fried potatoes and cauliflower with spices,10.00,100x100.gif
+indian,Chicken Biryani,Flavorful rice dish with chicken and aromatic spices,16.99,100x100.gif
+indian,Masala Dosa,Crispy crepe filled with spiced potatoes,9.99,100x100.gif
+japanese,Sushi,Assorted sushi rolls with fresh fish and rice,18.50,100x100.gif
+japanese,Ramen,Japanese noodle soup with broth and toppings,13.50,100x100.gif
+japanese,Teriyaki Chicken,"Grilled chicken with teriyaki sauce, served with rice",15.00,100x100.gif
+japanese,Tempura,Lightly battered and fried seafood and vegetables,14.50,100x100.gif
+japanese,Sashimi,"Fresh slices of raw fish, served with soy sauce and wasabi",16.50,100x100.gif
+japanese,Udon,Japanese noodle soup with thick wheat noodles,12.00,100x100.gif
+japanese,Miso Soup,Traditional Japanese soup with tofu and seaweed,5.00,100x100.gif
+japanese,Gyoza,Pan-fried dumplings with pork and vegetables,7.50,100x100.gif
+japanese,Chirashi Bowl,Assorted sashimi and vegetables over sushi rice,17.50,100x100.gif
+japanese,Okonomiyaki,Savory pancake with cabbage and various toppings,11.99,100x100.gif
+japanese,Katsu Curry,"Breaded and fried cutlet with Japanese curry, served with rice",16.00,100x100.gif
+japanese,Matcha Ice Cream,Green tea-flavored ice cream,6.50,100x100.gif
+japanese,Yakitori,"Grilled skewers of chicken, vegetables, or seafood",9.99,100x100.gif
+japanese,Unagi Don,"Grilled eel over rice, served with teriyaki sauce",19.00,100x100.gif
+japanese,Takoyaki,Battered octopus balls with takoyaki sauce and bonito flakes,8.50,100x100.gif
+japanese,Tofu Miso Ramen,Ramen soup with tofu and miso paste,13.99,100x100.gif
+japanese,Sushi Roll Combo,"Assorted sushi rolls with different fillings, served with pickled ginger and wasabi",20.00,100x100.gif
+mexican,Tacos al Pastor,Marinated pork tacos with pineapple and cilantro,11.50,100x100.gif
+mexican,Guacamole,"Fresh avocado dip with tomatoes, onions, and lime",8.50,100x100.gif
+mexican,Enchiladas,"Stuffed tortillas with meat, cheese, and sauce",10.99,100x100.gif
+mexican,Quesadillas,"Cheese and meat-filled tortillas, grilled and served with salsa",9.50,100x100.gif
+mexican,Burritos,"Flour tortilla filled with beans, meat, rice, and cheese",12.50,100x100.gif
+mexican,Tamales,"Corn masa filled with meat or beans, wrapped in corn husks",7.99,100x100.gif
+mexican,Chiles Rellenos,"Poblano peppers stuffed with cheese, battered, and fried",9.00,100x100.gif
+mexican,Sopes,"Thick corn tortillas with beans, meat, lettuce, and salsa",8.50,100x100.gif
+mexican,Pozole,"Hearty soup with hominy and pork or chicken, served with garnishes",11.00,100x100.gif
+mexican,Tostadas,"Crispy fried tortillas with beans, meat, lettuce, and cheese",10.50,100x100.gif
+mexican,Mole Poblano,Chicken in a rich and savory chocolate chili sauce,14.50,100x100.gif
+mexican,Ceviche,Marinated seafood salad with lime juice and spices,13.50,100x100.gif
+mexican,Horchata,Sweet rice milk beverage flavored with cinnamon,4.50,100x100.gif
+mexican,Flan,Traditional Mexican caramel custard dessert,6.00,100x100.gif
+mexican,Churros,Fried dough pastry sprinkled with cinnamon and sugar,5.50,100x100.gif
+mexican,Carne Asada,"Grilled marinated steak, served with tortillas and salsa",15.99,100x100.gif
+mexican,Birria,"Spicy stewed meat, typically goat or beef, served with tortillas",14.99,100x100.gif
+pizza,Margherita Pizza,"Fresh tomatoes, mozzarella, and basil",10.50,100x100.gif
+pizza,Pepperoni Pizza,Slices of pepperoni and mozzarella cheese,11.50,100x100.gif
+pizza,Hawaiian Pizza,"Pineapple, ham, and mozzarella cheese",12.50,100x100.gif
+pizza,Four Cheese Pizza,"Mozzarella, cheddar, Parmesan, and Gorgonzola cheeses",13.50,100x100.gif
+pizza,Meat Lovers Pizza,"Pepperoni, sausage, ham, and bacon",14.50,100x100.gif
+pizza,Vegetarian Pizza,Assorted vegetables and mozzarella cheese,12.00,100x100.gif
+pizza,Supreme Pizza,"Pepperoni, sausage, mushrooms, peppers, and onions",13.99,100x100.gif
+pizza,Calzone,"Stuffed pizza with mozzarella, ricotta, and choice of fillings",11.99,100x100.gif
+pizza,White Pizza,"Mozzarella, ricotta, garlic, and herbs",12.50,100x100.gif
+pizza,Barbecue Chicken Pizza,Grilled chicken with barbecue sauce and mozzarella cheese,13.50,100x100.gif
+pizza,Seafood Pizza,Assorted seafood with mozzarella cheese,15.50,100x100.gif
+pizza,Pesto Pizza,"Fresh basil pesto, mozzarella cheese, and cherry tomatoes",11.00,100x100.gif
+pizza,Mushroom Pizza,Sliced mushrooms with mozzarella cheese,12.00,100x100.gif
+pizza,Artichoke Pizza,Artichoke hearts with mozzarella cheese and herbs,12.50,100x100.gif
+pizza,Buffalo Chicken Pizza,Grilled chicken with buffalo sauce and mozzarella cheese,13.99,100x100.gif
+pizza,Margherita Pizza,"Fresh tomatoes, mozzarella, and basil",10.50,100x100.gif
+pizza,Spinach and Feta Pizza,"Fresh spinach, feta cheese, and mozzarella cheese",11.50,100x100.gif
+thai,Pad Thai,"Stir-fried rice noodles with tofu, peanuts, and bean sprouts",12.95,100x100.gif
+thai,Green Curry,"Thai green curry with chicken or vegetables, served with rice",14.50,100x100.gif
+thai,Tom Yum Goong,"Spicy and sour Thai soup with shrimp, lemongrass, and lime",11.99,100x100.gif
+thai,Mango Sticky Rice,"Sweet Thai dessert made with sticky rice, fresh mango, and coconut milk",9.50,100x100.gif
+thai,Massaman Curry,"Thai curry with potatoes, peanuts, and your choice of meat",15.50,100x100.gif
+thai,Som Tum (Papaya Salad),"Spicy green papaya salad with peanuts, tomatoes, and lime dressing",10.50,100x100.gif
+thai,Panang Curry,Thick and creamy Thai curry with beef or chicken,16.00,100x100.gif
+thai,Pad Krapow (Basil Chicken),"Stir-fried chicken with Thai basil and chili, served over rice",13.50,100x100.gif
+thai,Thai Iced Tea,"Sweet and creamy iced tea with condensed milk, a popular Thai beverage",5.50,100x100.gif
+thai,Pad See Ew,"Stir-fried noodles with soy sauce, vegetables, and your choice of meat",12.50,100x100.gif
+thai,Khao Pad (Thai Fried Rice),"Fried rice with eggs, vegetables, and your choice of meat",11.50,100x100.gif
+thai,Crying Tiger,"Grilled beef served with spicy dipping sauce, a Thai barbecue favorite",16.50,100x100.gif
+thai,Thai Fish Cakes,Spicy and fragrant Thai fish cakes served with cucumber relish,14.50,100x100.gif
+thai,Larb (Spicy Thai Salad),"Minced meat salad with lime, chili, and fresh herbs, served with lettuce",13.50,100x100.gif
+thai,Kai Med Ma Muang (Cashew Chicken),"Stir-fried chicken with cashew nuts, vegetables, and chili paste",15.00,100x100.gif
+thai,Sweet Sticky Rice with Mango,"Thai dessert with sticky rice, coconut milk, and ripe mango slices",9.00,100x100.gif
+thai,Pad Prik King,"Stir-fried green beans and your choice of meat in spicy red curry paste, served with rice",14.00,100x100.gif
+vegetarian,Caprese Salad,"Fresh tomatoes, mozzarella cheese, basil, and balsamic glaze",11.95,100x100.gif
+vegetarian,Vegetable Stir Fry,"Assorted vegetables stir-fried in a savory sauce, served over rice",12.50,100x100.gif
+vegetarian,Quinoa Stuffed Peppers,"Bell peppers stuffed with quinoa, black beans, corn, and spices",14.50,100x100.gif
+vegetarian,Eggplant Parmesan,Breaded and baked eggplant slices topped with marinara sauce and mozzarella cheese,13.95,100x100.gif
+vegetarian,Avocado Toast,"Sourdough toast topped with mashed avocado, cherry tomatoes, and a sprinkle of sea salt",9.50,100x100.gif
+vegetarian,Cauliflower Curry,"Roasted cauliflower in a creamy coconut curry sauce, served with naan bread",15.50,100x100.gif
+vegetarian,Spinach and Ricotta Stuffed Shells,"Jumbo pasta shells filled with spinach, ricotta cheese, and marinara sauce",12.95,100x100.gif
+vegetarian,Quinoa Salad,"Fresh quinoa mixed with cherry tomatoes, cucumbers, feta cheese, and lemon vinaigrette",10.95,100x100.gif
+vegetarian,Vegetable Spring Rolls,"Crispy spring rolls filled with assorted vegetables, served with sweet chili sauce",11.50,100x100.gif
+vegetarian,Black Bean Burger,"Homemade black bean patty on a whole wheat bun with lettuce, tomato, and avocado",13.50,100x100.gif
+vegetarian,Stuffed Portobello Mushrooms,"Portobello mushrooms stuffed with spinach, sun-dried tomatoes, and goat cheese",14.95,100x100.gif
+vegetarian,Caprese Flatbread,"Fresh mozzarella, cherry tomatoes, basil, and balsamic glaze on crispy flatbread",12.50,100x100.gif
+vegetarian,Chickpea Curry,"Spicy chickpea curry with coconut milk, served with basmati rice",14.50,100x100.gif
+vegetarian,Butternut Squash Risotto,"Creamy risotto made with roasted butternut squash, parmesan cheese, and sage",15.50,100x100.gif
+vegetarian,Bruschetta,"Freshly toasted bread topped with diced tomatoes, garlic, basil, and olive oil",9.50,100x100.gif
+vegetarian,Vegetable Paella,"Spanish-style paella with vegetables, saffron rice, and a variety of spices",16.50,100x100.gif
+vegetarian,Greek Salad,"Fresh lettuce, tomatoes, cucumbers, olives, feta cheese, and Greek dressing",10.50,100x100.gif
+vegetarian,Portobello Mushroom Burger,"Grilled portobello mushroom cap on a whole wheat bun with lettuce, tomato, and Swiss cheese",13.95,100x100.gif
+venezuelan,Arepas,"Traditional Venezuelan cornmeal cakes filled with various ingredients like cheese, meat, or avocado.",5.00,100x100.gif
+venezuelan,Pabellón Criollo,"Venezuela's national dish, consisting of shredded beef, black beans, rice, and fried plantains.",12.00,100x100.gif
+venezuelan,Cachapas,Sweet corn pancakes often served with fresh cheese and butter.,7.00,100x100.gif
+venezuelan,Hallacas,"Venezuelan tamales made with corn dough and filled with a stew of beef, pork, chicken, olives, and raisins, wrapped in plantain leaves.",10.00,100x100.gif
+venezuelan,Empanadas,"Fried or baked pastries filled with beef, chicken, cheese, or other fillings.",4.00,100x100.gif
+venezuelan,Asado Negro,"Beef roast cooked in a dark, sweet, and savory sauce.",15.00,100x100.gif
+venezuelan,Perico,"Scrambled eggs with tomatoes, onions, and bell peppers, typically served with arepas.",6.00,100x100.gif
+venezuelan,Polvorosa de Pollo,Chicken pot pie with a slightly sweet crust.,11.00,100x100.gif
+venezuelan,Patacones,"Twice-fried green plantains, often served with toppings like shredded beef, cheese, and vegetables.",8.00,100x100.gif
+venezuelan,Sancocho,"Hearty soup made with beef, chicken, or fish, and vegetables like yucca, plantains, and corn.",9.00,100x100.gif
+venezuelan,Quesillo,"Venezuelan-style flan made with condensed milk, eggs, and caramel.",4.50,100x100.gif
+venezuelan,Tres Leches,Sponge cake soaked in three kinds of milk and topped with whipped cream.,5.00,100x100.gif
+venezuelan,Torta de Plátano,Sweet plantain cake often made with cinnamon and cheese.,4.00,100x100.gif
+venezuelan,Arroz con Leche,Creamy rice pudding flavored with cinnamon and sometimes topped with raisins.,3.50,100x100.gif
+venezuelan,Majarete,"Corn pudding made with coconut milk, cinnamon, and cloves.",4.00,100x100.gif
+venezuelan,Dulce de Lechosa,Sweet dessert made from green papaya cooked in sugar and cinnamon syrup.,4.00,100x100.gif
+venezuelan,Golfeados,Sweet rolls made with anise and topped with cheese and syrup.,3.50,100x100.gif
+venezuelan,Buñuelos,Fried dough balls served with sugar syrup.,3.00,100x100.gif
+venezuelan,Catalina,Spiced molasses cookies.,2.50,100x100.gif
+venezuelan,Helado de Cazuela,Traditional homemade ice cream made with tropical fruits.,3.50,100x100.gif
+empanada,Traditional Beef Empanada,A classic savory pastry filled with seasoned ground beef.,3.50,100x100.gif
+empanada,Chicken and Cheese Empanada,Tender chicken and gooey cheese wrapped in a golden pastry shell.,3.75,100x100.gif
+empanada,Spinach and Cheese Empanada,Fresh spinach and creamy cheese baked to perfection in a flaky crust.,3.75,100x100.gif
+empanada,Ham and Cheese Empanada,Savory ham and melted cheese folded in a delicious pastry pocket.,3.50,100x100.gif
+empanada,Apple Cinnamon Empanada,Sweet apples with a hint of cinnamon tucked into a crispy pastry shell.,3.50,100x100.gif
+empanada,Chocolate Empanada,"Rich chocolate filling encased in a warm, crispy pastry.",3.75,100x100.gif
+empanada,Espresso,A strong and aromatic shot of espresso.,2.50,100x100.gif
+empanada,Cappuccino,"Equal parts espresso, steamed milk, and foamed milk.",3.50,100x100.gif
+empanada,Latte,A smooth and creamy coffee drink made with espresso and steamed milk.,3.75,100x100.gif
+empanada,Americano,Hot water poured over a shot of espresso for a bold and robust flavor.,3.00,100x100.gif
+empanada,Mocha,"Espresso combined with chocolate syrup and steamed milk, topped with whipped cream.",4.00,100x100.gif
+empanada,Macchiato,A shot of espresso with a dollop of frothy milk foam.,3.25,100x100.gif
+empanada,Churros,"Crispy fried dough dusted with cinnamon sugar, served with chocolate dipping sauce.",4.50,100x100.gif
+empanada,Alfajores,Delicate shortbread cookies filled with dulce de leche and dusted with powdered sugar.,3.75,100x100.gif
+empanada,Dulce de Leche Empanada,A sweet empanada filled with decadent dulce de leche.,4.00,100x100.gif
+empanada,Tres Leches Cake,"Moist sponge cake soaked in three types of milk, topped with whipped cream.",4.75,100x100.gif
+empanada,Flan,A creamy caramel custard dessert with a rich flavor and smooth texture.,4.25,100x100.gif
+cafebreria,Don Quijote’s Beef Empanada,Juicy beef empanada inspired by Cervantes’ timeless novel.,6.00,100x100.gif
+cafebreria,Federico’s Lorca Chicken Empanada,Savory chicken empanada named after Federico García Lorca.,5.50,100x100.gif
+cafebreria,Isabel Allende’s Cheese Empanada,Cheesy delight inspired by Isabel Allende’s captivating stories.,5.00,100x100.gif
+cafebreria,Borges’ Spinach and Cheese Empanada,A blend of spinach and cheese inspired by Jorge Luis Borges.,5.50,100x100.gif
+cafebreria,Marquez’s Sweet Corn Empanada,Sweet corn filling inspired by Gabriel García Márquez’s magical realism.,5.50,100x100.gif
+cafebreria,Neruda’s Seafood Empanada,Delicious seafood empanada inspired by Pablo Neruda’s coastal poetry.,7.00,100x100.gif
+cafebreria,Cortázar’s Ham and Cheese Empanada,Classic ham and cheese inspired by Julio Cortázar’s imaginative works.,5.50,100x100.gif
+cafebreria,Sor Juana’s Mushroom Empanada,Savory mushroom filling inspired by Sor Juana Inés de la Cruz.,6.00,100x100.gif
+cafebreria,Llosa’s Potato Empanada,Peruvian-style potato filling inspired by Mario Vargas Llosa.,5.50,100x100.gif
+cafebreria,Martí’s Café Cubano,A strong Cuban coffee inspired by José Martí.,3.00,100x100.gif
+cafebreria,Benedetti’s Mate,"Traditional Uruguayan mate tea, named after Mario Benedetti.",2.50,100x100.gif
+cafebreria,Lorca’s Cortado,"Espresso cut with a small amount of warm milk, inspired by Federico García Lorca.",3.50,100x100.gif
+cafebreria,Borges’ Cappuccino,A rich and frothy cappuccino inspired by Jorge Luis Borges.,4.00,100x100.gif
+cafebreria,Allende’s Latte,A creamy latte named after Isabel Allende.,4.00,100x100.gif
+cafebreria,Marquez’s Espresso,A strong and bold espresso inspired by Gabriel García Márquez.,2.50,100x100.gif
+cafebreria,Neruda’s Mocha,A delightful mocha coffee inspired by Pablo Neruda’s romantic poetry.,4.50,100x100.gif
+cafebreria,Sor Juana’s Iced Coffee,A refreshing iced coffee inspired by Sor Juana Inés de la Cruz.,3.50,100x100.gif
+cafebreria,Llosa’s Flat White,Smooth and velvety flat white inspired by Mario Vargas Llosa.,4.00,100x100.gif

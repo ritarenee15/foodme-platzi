@@ -1,36 +1,34 @@
-<div class="fm-customer-bkg img-rounded">
-</div>
+<div class="container margin_60_40">
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <div class="sign_up">
+        <div class="head">
+          <div class="title">
+            <h3>Looking for Good Food?</h3>
+          </div>
+        </div>
 
-<form class="form-horizontal" name="customerForm" novalidate>
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Get Started</h3>
-    </div>
-    <div class="modal-body">
+        <div class="main">
+          <h6>Personal details</h6>
+          <div class="form-group">
+            <input class="form-control" id="customerName" placeholder="First and Last Name" for="customerName"
+              ng-model="customerName" required>
 
-      <div class="control-group">
-        <label class="control-label" for="customerName">Your Name</label>
-        <div class="controls">
-          <input type="text" id="customerName" placeholder="Joe Black"
-                 class="input-medium"
-                 ng-model="customerName" required>
+          </div>
+          <div class="form-group">
+            <input class="form-control" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043"
+              class="input-xlarge" ng-model="customerAddress" required>
+
+          </div>
+
+          <button class="btn btn-success full-width mb_5" ng-disabled="customerForm.$invalid"
+            ng-click="findRestaurants(customerName, customerAddress)">Find Restaurants!</button>
         </div>
       </div>
 
-      <div class="control-group">
-        <label class="control-label" for="address">Delivery Address</label>
-        <div class="controls">
-          <input type="text" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043"
-                 class="input-xlarge"
-                 ng-model="customerAddress" required>
-        </div>
-      </div>
+    </div>
 
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary"
-              ng-disabled="customerForm.$invalid"
-              ng-click="findRestaurants(customerName, customerAddress)">Find Restaurants!</button>
-    </div>
+
   </div>
-</form>
+
+</div>

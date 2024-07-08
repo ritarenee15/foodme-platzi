@@ -68,20 +68,25 @@ Restaurant.fromArray = function(data) {
     price: parseInt(data[6], 10),
     rating: parseInt(data[7], 10),
     location: data[8],
-    description: data[9]
+    description: data[9],
+    long_description: data[10]
   });
 };
 
 
 var MenuItem = function(data) {
   this.name = data.name;
+  this.description = data.description;
   this.price = data.price;
+  this.image = data.image;
 };
 
 MenuItem.fromArray = function(data) {
   return new MenuItem({
     name: data[1],
-    price: parseFloat(data[2])
+    description: data[2],
+    price: parseFloat(data[2]),
+    image: data[3]
   });
 };
 

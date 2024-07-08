@@ -33,5 +33,7 @@ foodMeApp.config(function($routeProvider) {
       }).
       when('/help', {
         templateUrl: 'views/help.html'
-      });
+      }).otherwise({
+        templateUrl: "views/404.html"
+    });;
 });

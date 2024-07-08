@@ -1,80 +1,225 @@
-<form name="form">
-  <div class="container fm-panel fm-checkout">
-    <h4>Menu</h4>
+<div class="container margin_60_40" style="transform: none;">
+    <div class="row justify-content-center" style="transform: none;">
 
-    <div class="row">
-      <div class="span6">
-        <h5>Deliver To:</h5>
-        <div>{{customer.name}}</div>
-        <div>{{customer.address}}</div>
-        <a href="#/customer">Change</a>
-      </div>
-      <div class="span6">
-        <h5>Payment:</h5>
-        <div class="control-group">
-          <select name="ccType" class="input-medium"
-                  required
-                  ng-model="cart.payment.type">
-            <option value="visa">Visa</option>
-            <option value="mc">MasterCard</option>
-            <option value="amex">Amex</option>
-            <option value="discover">Discover</option>
-          </select>
+        <div class="col-xl-6 col-lg-8">
+            <div class="box_booking_2 style_2">
+                <div class="head">
+                    <div class="title">
+                        <h3>Deliver To:</h3>
+                    </div>
+                </div>
+                <!-- /head -->
+                <div class="main">
+                    <div class="form-group">
+                        <label>{{customer.name}}</label>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{customer.address}}</label>
+
+                    </div>
+
+                    <div class="span6">
+
+                        <a href="#/customer">Change</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /box_booking -->
+            <form name="form">
+                <div class="box_booking_2 style_2">
+
+                    <div class="head">
+                        <div class="title">
+                            <h3>Payment Method</h3>
+                        </div>
+                    </div>
+                    <!-- /head -->
+                    <div class="main">
+                        <div class="payment_select">
+                            <label class="container_radio">Credit Card
+                                <input type="radio" value="" checked="" name="payment_method">
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="icon_creditcard"></i>
+
+                            <select name="ccType" class="form-group" required ng-model="cart.payment.type">
+                                <option value="visa">Visa</option>
+                                <option value="mc">MasterCard</option>
+                                <option value="amex">Amex</option>
+                                <option value="discover">Discover</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Name on card</label>
+                            <input type="text" class="form-control" id="name_card_order" name="name_card_order"
+                                placeholder="First and last name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Card number</label>
+                            <input type="text" id="card_number" name="ccNum" class="form-control"
+                                placeholder="Card number" maxlength="16" required ng-pattern="/\d{16}/"
+                                ng-model="cart.payment.number">
+                        </div>
+
+                        <div class="row">
+
+
+
+                            <div class="col-md-6">
+                                <label>Expiration date</label>
+                                <div class="row">
+                                    <div class="col-md-6 col-6">
+                                        <div class="form-group">
+                                            <input type="text" id="expire_month" name="ccExp" class="form-control"
+                                                placeholder="mm/yyyy" maxlength="16" required
+                                                ng-pattern="/\d\d\/\d\d\d\d/" ng-model="cart.payment.expire">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+
+                                <div class="form-group">
+                                    <label>Security code</label>
+                                    <div class="row">
+                                        <div class="col-md-4 col-6">
+                                            <div class="form-group">
+                                                <input type="text" id="ccv" name="ccCvc" class="form-control"
+                                                    placeholder="CVC" maxlength="4" required ng-pattern="/\d{3,4}/"
+                                                    ng-model="cart.payment.cvc">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-6">
+                                            <img src="img/icon_ccv.gif" width="50" height="29" alt="ccv"><small>Last 3
+                                                digits</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            <!-- /box_booking -->
         </div>
-        <div class="control-group">
-          <input type="text" name="ccNum"
-                 placeholder="Card number"
-                 maxlength="16"
-                 required ng-pattern="/\d{16}/"
-                 ng-model="cart.payment.number">
+
+        <!-- /col -->
+        <div class="col-xl-4 col-lg-4" id="sidebar_fixed"
+            style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+
+            <!-- /box_booking -->
+            <div class="theiaStickySidebar"
+                style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                <div class="box_booking">
+                    <div class="head">
+                        <h3>Order Summary</h3>
+                        <div>{{restaurantId}}</div>
+                    </div>
+                    <!-- /head -->
+                    <div class="main">
+
+                        <div class="dropdown time">
+                            <a href data-bs-toggle="dropdown" aria-expanded="false" class="">Time <span
+                                    id="selected_time"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu-content">
+                                    <h4>Lunch</h4>
+                                    <div class="radio_select add_bottom_15">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="time_1" name="time" value="12.00pm">
+                                                <label for="time_1">12.00<em>-40%</em></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="time_2" name="time" value="12.30pm">
+                                                <label for="time_2">12.30<em>-40%</em></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="time_3" name="time" value="01.00pm">
+                                                <label for="time_3">1.00<em>-40%</em></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="time_4" name="time" value="01.30pm">
+                                                <label for="time_4">1.30<em>-40%</em></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /time_select -->
+                                    <h4>Dinner</h4>
+                                    <div class="radio_select">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="time_5" name="time" value="08.00pm">
+                                                <label for="time_5">20.00<em>-40%</em></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="time_6" name="time" value="08.30pm">
+                                                <label for="time_6">20.30<em>-40%</em></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="time_7" name="time" value="09.00pm">
+                                                <label for="time_7">21.00<em>-40%</em></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="time_8" name="time" value="09.30pm">
+                                                <label for="time_8">21.30<em>-40%</em></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /time_select -->
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <ul class="clearfix">
+                            <li ng-repeat="item in cart.items">
+                                <a href>{{item.qty}} x {{item.name}}</a><span>{{item.qty*item.price | currency}}</span>
+                            </li>
+
+                        </ul>
+
+                        <ul class="clearfix">
+
+                            <li class="total">Total<span>{{ cart.total() | currency }}</span></li>
+                        </ul>
+
+                        <button class="btn btn-primary full-width mb_5"
+                            ng-disabled="form.$invalid || !cart.items.length || submitting"
+                            ng-click="purchase()">Purchase</button>
+                        <a href="#/menu/{{restaurantId}}" class="btn_1 mb_5">Back to Menu</a>
+                        <a href class="btn btn-danger" ng-click="cart.reset()">Clear Cart</a>
+
+
+
+                        <div class="text-center"><small>Or Call Us at <strong>0432 48432854</strong></small></div>
+                    </div>
+                </div>
+                <div class="resize-sensor"
+                    style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                    <div class="resize-sensor-expand"
+                        style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                        <div
+                            style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 437px; height: 1012px;">
+                        </div>
+                    </div>
+                    <div class="resize-sensor-shrink"
+                        style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                        <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="control-group">
-          <input type="text" name="ccExp" placeholder="mm/yyyy" class="input-medium"
-                 maxlength="16"
-                 required ng-pattern="/\d\d\/\d\d\d\d/"
-                 ng-model="cart.payment.expire">
-        </span>
-        <span class="control-group">
-          <input type="text" name="ccCvc" placeholder="CVC" class="input-small"
-                 maxlength="4"
-                 required ng-pattern="/\d{3,4}/"
-                 ng-model="cart.payment.cvc">
-        </span>
-      </div>
-    </div>
 
-    <div>
-      <table class="table table-hover table-striped">
-        <tr>
-          <th>Qty</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Subtotal</th>
-          <th></th>
-        </tr>
-        <tr ng-repeat="item in cart.items">
-          <td><input type="number" ng-model="item.qty"></td>
-          <td>{{item.name}}</td>
-          <td>{{item.price | currency}}</td>
-          <td>{{item.price * item.qty | currency}}</td>
-          <td><a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a></td>
-        </tr>
-        <tr>
-          <th></th>
-          <th></th>
-          <th>Total:</th>
-          <th>{{ cart.total() | currency }}</th>
-          <th></th>
-        </tr>
-      </table>
-
-      <div class="fm-right">
-        <a href="#/menu/{{restaurantId}}" class="btn">Back to Menu</a>
-        <a href class="btn btn-danger" ng-click="cart.reset()">Clear Cart</a>
-        <button class="btn btn-primary"
-                ng-disabled="form.$invalid || !cart.items.length || submitting"
-                ng-click="purchase()">Purchase</button>
-      </div>
     </div>
-  </div>
-</form>
+    <!-- /row -->
+</div>

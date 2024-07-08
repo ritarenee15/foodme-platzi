@@ -1,64 +1,122 @@
-<fm-deliver-to></fm-deliver-to>
-
-
-<div class="row-fluid">
-
-  <div class="span3 fm-panel">
-    <h4>Filter Restaurants</h4>
-
-    <form>
-
-      <h5>Rating</h5>
-
-      <fm-rating ng-model="$parent.filter.rating"></fm-rating>
-
-
-      <h5>Price</h5>
-
-      <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
-
-
-      <h5>Cuisine</h5>
-
-      <div fm-checkbox-list ng-model="filter.cuisine">
-        <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
-          <input type="checkbox" value="{{name}}"> {{title}}
-        </label>
+<div class="page_header element_to_stick">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-7 col-md-7 d-none d-md-block">
+        <fm-deliver-to></fm-deliver-to>
       </div>
-    </form>
+    </div>
   </div>
+</div>
+
+<div class="container margin_30_40" style="transform: none;">
+  <div class="row" style="transform: none;">
+
+    <aside class="col-lg-3" id="sidebar_fixed"
+      style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+      <div class="theiaStickySidebar"
+        style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 323.5px;">
+        <div class="clearfix">
+
+          <a href class="open_filters btn_filters "><i class="icon_adjust-vert"></i><span>Filters</span></a>
+        </div>
+        <div class="filter_col">
 
 
-  <div class="span9 fm-panel fm-restaurant-list">
-    <h4>
-      <ng-pluralize count="restaurants.length"
-                    when="{'0'    : 'No restaurants found. :-(',
-                           'one'  : '1 restaurant found!',
-                           'other': '{} restaurants found!'}">
-      </ng-pluralize>
-    </h4>
-
-    <table class="table table-hover table-striped">
-      <tr>
-        <th><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
-        <th><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
-        <th><a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
-      </tr>
-      <tr ng-repeat="restaurant in restaurants">
-        <td>
-          <a href="#/menu/{{restaurant.id}}">
-            <img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">
-            <b>{{restaurant.name}}</b>
+          <a href class="open_filters btn_filters">
+            <i class="icon_close"></i>
           </a>
-          <p>{{restaurant.description}}</p>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
-        </td>
-      </tr>
-    </table>
+
+          <h4>Filter Restaurants</h4>
+          <div class="filter_type">
+            <h5>Rating</h5>
+
+            <fm-rating ng-model="$parent.filter.rating"></fm-rating>
+          </div>
+          <div class="filter_type">
+
+            <h5>Price</h5>
+
+            <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
+
+            <h5>Cuisine</h5>
+
+            <div fm-checkbox-list ng-model="filter.cuisine">
+              <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="container_check">
+                <input type="checkbox" value="{{name}}"> {{title}}
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="resize-sensor"
+          style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+          <div class="resize-sensor-expand"
+            style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+            <div
+              style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 330px; height: 1090px;">
+            </div>
+          </div>
+          <div class="resize-sensor-shrink"
+            style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+            <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <div class="col-lg-9">
+      <h4>
+        <ng-pluralize count="restaurants.length" when="{'0'    : 'No restaurants found. :-(',
+                             'one'  : '1 restaurant found!',
+                             'other': '{} restaurants found!'}">
+        </ng-pluralize>
+      </h4>
+
+      <div class="detail_page_head clearfix">
+
+        <div class="title">
+          <ul class="tags">
+            <li><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></li>
+            <li><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></li>
+            <li><a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div ng-repeat="restaurant in restaurants" class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+          <div class="strip">
+            <figure>
+              <span class="ribbon off">-20%</span>
+              <img ng-src="img/restaurants/{{restaurant.id}}.jpg" src="img/restaurants/{{restaurant.id}}.jpg"
+                class="img-fluid lazy loaded" alt="" data-was-processed="true">
+              <a href="#/menu/{{restaurant.id}}" class="strip_info">
+                <small>{{restaurant.cuisine}}</small>
+                <div class="item_title">
+                  <h3>{{restaurant.name}}</h3>
+                  <small>{{restaurant.description}}</small>
+                </div>
+              </a>
+            </figure>
+            <ul>
+              <li><span><fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true"></fm-rating></span>
+              </li>
+              <li>
+                <div class="score"><span><fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </div>
 </div>

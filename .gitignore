@@ -6,4 +6,11 @@ build.xml
 .project
 .settings
 .idea/*
+.vs
+.vscode/*
+
+.env
+
+
+package-lock.json
 node_modules/
