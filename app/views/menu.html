@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="span2">
-      <img src="img/restaurants/angular.jpg" class="img-rounded">
+      <img ng-src="img/restaurants/{{restaurant.id}}.jpg" class="img-rounded">
     </div>
 
     <div class="span10">
@@ -13,7 +13,9 @@
 
       <div class="row">
         <div class="span2">
-          <div>{{restaurant.address}}</div>
+          <div>{{restaurant.location}}</div>
+          <div>Opens at: {{restaurant.opens }}</div>
+          <div>Closes at: {{restaurant.closes }}</div>
 
           <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
           <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true"></fm-rating>
@@ -33,30 +35,33 @@
   <div class="span8 fm-panel fm-menu-list">
     <h4>Menu</h4>
 
-
-    <ul>
-      <li ng-repeat="menuItem in restaurant.menuItems">
-        <a href ng-click="cart.add(menuItem, restaurant)">
-          <span>{{menuItem.name}}</span>
-          <span>{{menuItem.price}}</span>
-          <i class="icon-plus-sign"></i>
-        </a>
-      </li>
-    </ul>
+    <!-- Menu items -->
+    <table class="menu-table">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+      <tr ng-repeat="menuItem in restaurant.menuItems">
+        <td><a href ng-click="cart.add(menuItem, restaurant)"> <span>{{menuItem.name}}</span> <i class="icon-plus-sign"></i></a></td>
+        <td>{{menuItem.price}}</td>
+      </tr>
+    </table>
 
   </div>
 
+  <!-- Order details -->
   <div class="span4 fm-panel fm-cart">
-    <h4>Your order</h4>
+    <h4>Your order - <a href class="btn btn-danger" ng-click="cart.reset()">Clear Cart</a></h4>
     <form>
       <ul class="unstyled">
         <li ng-repeat="item in cart.items">
-          <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
-          {{item.qty}} &times; {{item.name}}
+          <input type="number" min="0" ng-model="item.qty" style="width: 35px;">
+           &times; {{item.name}}
+           <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
         </li>
       </ul>
       <div class="pull-right" ng-show="cart.items.length">
-        <a href="#/checkout" ng-disabled="!cart.items.length" class="btn">Checkout</a>
+        <a href="#/checkout" ng-disabled="!cart.items.length" class="btn btn-success">Checkout</a>
       </div>
       <p>
         <b>Total: {{cart.total() | currency}}</b>

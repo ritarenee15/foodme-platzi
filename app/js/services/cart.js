@@ -59,7 +59,7 @@ foodMeApp.service('cart', function Cart(localStorage, customer, $rootScope, $htt
       }).then(function(response) {
         /****************************************
         /*          Custom Attributes           *
-        /****************************************
+        /****************************************/
         self.items.forEach(
           function(item) {
             newrelic.addPageAction('orderItem', { 

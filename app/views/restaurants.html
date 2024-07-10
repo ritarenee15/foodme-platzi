@@ -38,27 +38,23 @@
       </ng-pluralize>
     </h4>
 
-    <table class="table table-hover table-striped">
-      <tr>
-        <th><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
-        <th><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
-        <th><a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
-      </tr>
-      <tr ng-repeat="restaurant in restaurants">
-        <td>
-          <a href="#/menu/{{restaurant.id}}">
-            <img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">
-            <b>{{restaurant.name}}</b>
-          </a>
-          <p>{{restaurant.description}}</p>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
-        </td>
-      </tr>
-    </table>
+    <p>Sort by: <a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a>
+                <a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a>
+                <a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></p>
+    <div class="restaurant-grid">
+
+      <div class="restaurant-card" ng-repeat="restaurant in restaurants">
+        <a href="#/menu/{{restaurant.id}}">
+          <img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">
+          <b>{{restaurant.name}}</b>
+        </a>
+        <p>{{restaurant.description}}</p>
+        <p><fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating></p>
+        <p><fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating></p>
+        <p>Cuisine: {{restaurant.cuisine }}</p>
+      </div>
+
+    </div>
+
   </div>
 </div>

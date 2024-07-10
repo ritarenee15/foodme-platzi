@@ -1,5 +1,7 @@
+require('../server/tracing'); // Adjust the path to where you placed tracing.js
 // Uncomment after adding New Relic agent to project
-// const newrelic = require('newrelic');
+require('dotenv').config();
+const newrelic = require('newrelic');
 
 const express = require('express');
 const logger = require('pino')();
@@ -63,7 +65,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
 
     /*************************************
     /*         Custom attributes         *
-    /*************************************
+    /*************************************/
     var order = req.body;
     var itemCount = 0;
     var orderTotal = 0;
@@ -118,6 +120,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
 
   // read the data from json and start the server
   fs.readFile(DATA_FILE, function(err, data) {
+    // console.log(JSON.parse(data.));
     JSON.parse(data).forEach(function(restaurant) {
       storage.add(new RestaurantRecord(restaurant));
     });

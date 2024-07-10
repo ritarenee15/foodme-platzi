@@ -1,3 +1,21 @@
+# My presentation of the project in this video 
+[![Project explanation](screenshot-presentation.jpeg)](https://www.youtube.com/watch?v=YlGbeWYalZI)
+
+## Configuration 
+
+For the application to run it's needed to create a `.env` file in the root folder with the following environment variables:
+
+```
+NEW_RELIC_APP_NAME="<YOUR-NEWRELIC-APP-NAME>"
+NEW_RELIC_LICENSE_KEY="<YOUR-NEWRELIC-LICENCE-KEY>"
+
+OTEL_EXPORTER_OTLP_ENDPOINT=https://otlp.nr-data.net
+OTEL_EXPORTER_OTLP_HEADERS=api-key="<YOUR-NEWRELIC-LICENCE-KEY>"
+OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT=4095
+OTEL_SERVICE_NAME="<YOUR-NEWRELIC-APP-NAME>"
+OTEL_RESOURCE_ATTRIBUTES=service.instance.id=123
+```
+
 # Platzi Challenge - Food Delivery Service App
 
 ## The Task

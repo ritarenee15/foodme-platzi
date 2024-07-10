@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Playwrite';
+  font-style: normal;
+  font-weight: 400;
+  src: url(PlaywriteNO-VariableFont_wght.ttf) format('truetype');
+}
