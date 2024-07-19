@@ -1,36 +1,111 @@
-<div class="fm-customer-bkg img-rounded">
+<div
+  class="bg-white d-flex align-items-center justify-content-between px-4 mt-4 position-relative"
+>
+  <div class="title-principal">
+    <h1>¡Disfruta tu <span>deliciosa</span> comida!</h1>
+    <p>
+      Pide y disruta de tu delicioso almuerzo en los mejores restaurantes en el
+      mundo
+    </p>
+    <div class="mt-3">
+      <button
+        type="button"
+        class="btn-nav-two"
+        data-bs-toggle="modal"
+        data-bs-target="#sesionModal"
+      >
+        ¡Pide Ahora!
+      </button>
+    </div>
+  </div>
+
+  <div class="content-image">
+    <img
+      class="img-salad"
+      src="../img/home/ensalada-sushi.png"
+      alt="imagen de ensalada"
+    />
+  </div>
+</div>
+<div>
+  <img
+    class="image-float bf-1"
+    src="../img/home/hamburguesa.png"
+    alt="imagen hamburguesa"
+  />
+  <img
+    class="image-float bf-2"
+    src="../img/home/ramen2.png"
+    alt="imagen ramen"
+  />
+  <img class="image-float bf-3" src="../img/home/taco.png" alt="imagen tacos" />
+  <img
+    class="image-float bf-4"
+    src="../img/home/pasta.png"
+    alt="imagen tallarines"
+  />
+  <img
+    class="image-float bf-5"
+    src="../img/home/ensalada.png"
+    alt="imagen salteado1"
+  />
 </div>
 
-<form class="form-horizontal" name="customerForm" novalidate>
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Get Started</h3>
-    </div>
-    <div class="modal-body">
-
-      <div class="control-group">
-        <label class="control-label" for="customerName">Your Name</label>
-        <div class="controls">
-          <input type="text" id="customerName" placeholder="Joe Black"
-                 class="input-medium"
-                 ng-model="customerName" required>
+<!-- Modal -->
+<form name="customerForm" novalidate>
+  <div
+    class="modal fade"
+    id="sesionModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Get Started</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
-      </div>
-
-      <div class="control-group">
-        <label class="control-label" for="address">Delivery Address</label>
-        <div class="controls">
-          <input type="text" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043"
-                 class="input-xlarge"
-                 ng-model="customerAddress" required>
-        </div>
-      </div>
-
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary"
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="customerName" class="col-form-label">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerName"
+              placeholder="Joe Black"
+              ng-model="customerName"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="address" class="col-form-label">Delivery Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="432 Wiggly Rd, Mountain View, 94043"
+              ng-model="customerAddress"
+              required
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn-nav-two"
               ng-disabled="customerForm.$invalid"
-              ng-click="findRestaurants(customerName, customerAddress)">Find Restaurants!</button>
+              ng-click="findRestaurants(customerName, customerAddress)"
+            >
+              ¡Encuentra restaurantes!
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </form>

@@ -1,64 +1,128 @@
 <fm-deliver-to></fm-deliver-to>
 
-
-<div class="row-fluid">
-
+<div class="row-fluid px-4">
   <div class="span3 fm-panel">
     <h4>Filter Restaurants</h4>
 
     <form>
-
-      <h5>Rating</h5>
-
-      <fm-rating ng-model="$parent.filter.rating"></fm-rating>
-
-
-      <h5>Price</h5>
-
-      <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
-
+      <div class="d-flex align-items-center gap-3 mb-3 mt-3">
+        <div class="d-flex align-items-center gap-2">
+          <h5>Rating:</h5>
+          <fm-rating
+            ng-model="$parent.filter.rating"
+            class="rating-stars"
+          ></fm-rating>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <h5>Price:</h5>
+          <fm-rating
+            ng-model="$parent.filter.price"
+            class="price-dollars"
+            symbol="$"
+          ></fm-rating>
+        </div>
+      </div>
 
       <h5>Cuisine</h5>
-
-      <div fm-checkbox-list ng-model="filter.cuisine">
+      <div class="mt-3" fm-checkbox-list ng-model="filter.cuisine">
         <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
-          <input type="checkbox" value="{{name}}"> {{title}}
+          <input id="checkbox-{{name}}" type="checkbox" value="{{name}}" />
+          <div class="box-cuisine">
+            <img
+              style="width: 30px; height: 30px"
+              ng-src="{{getCountryImage(name)}}"
+              alt="{{title}}"
+            />
+            {{title}}
+          </div>
         </label>
       </div>
     </form>
   </div>
 
-
   <div class="span9 fm-panel fm-restaurant-list">
-    <h4>
-      <ng-pluralize count="restaurants.length"
-                    when="{'0'    : 'No restaurants found. :-(',
-                           'one'  : '1 restaurant found!',
-                           'other': '{} restaurants found!'}">
+    <h4 id="title">
+      <ng-pluralize
+        count="restaurants.length"
+        when="{'0': 'No restaurants found. 😥',
+                'one'  : '1 restaurant found!',
+                'other': '{} restaurants found!'}"
+      >
       </ng-pluralize>
     </h4>
 
-    <table class="table table-hover table-striped">
-      <tr>
-        <th><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
-        <th><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
-        <th><a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
-      </tr>
-      <tr ng-repeat="restaurant in restaurants">
-        <td>
-          <a href="#/menu/{{restaurant.id}}">
-            <img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">
-            <b>{{restaurant.name}}</b>
-          </a>
-          <p>{{restaurant.description}}</p>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>
-        </td>
-        <td>
-          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
-        </td>
-      </tr>
-    </table>
+    <div class="content-restaurant">
+      <!-- <tr>
+        <th>
+          <a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a>
+        </th>
+        <th>
+          <a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a>
+        </th>
+        <th>
+          <a href ng-click="sortBy('rating')"
+            >Rating {{sortIconFor('rating')}}</a
+          >
+        </th>
+      </tr> -->
+      <div class="box-restaurant" ng-repeat="restaurant in restaurants">
+        <a href="#/menu/{{restaurant.id}}">
+          <div class="box-item d-flex align-items-center gap-2">
+            <div>
+              <img
+                class="img-rounded pull-left"
+                ng-src="img/restaurants/{{restaurant.id}}.png"
+              />
+            </div>
+            <div class="box-title-description">
+              <div>
+                <p>{{restaurant.name}}</p>
+                <p>{{restaurant.description}}</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-1">
+                  <span>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_165_2)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M23.0794 16.6149C23.0794 21.7097 18.4629 24 12 24C5.53715 24 0.920578 21.7097 0.920578 16.6509C0.920578 11.112 3.69086 8.30571 9.22972 5.49943L7.26858 1.84629C7.15156 1.66331 7.08641 1.45201 7.08005 1.23491C7.07369 1.01781 7.12637 0.80306 7.23248 0.613551C7.33858 0.424042 7.49413 0.266882 7.68254 0.158829C7.87094 0.050777 8.08514 -0.00411651 8.30229 2.22614e-06H16.1314C16.335 0.0052102 16.5338 0.0621224 16.7093 0.165382C16.8848 0.268643 17.0311 0.414855 17.1345 0.590258C17.2379 0.765662 17.295 0.964488 17.3003 1.16802C17.3057 1.37156 17.2592 1.57311 17.1651 1.75372L14.7703 5.49943C20.3074 8.268 23.0794 11.0743 23.0794 16.6149ZM13.0714 8.37771C13.0714 8.09355 12.9586 7.82103 12.7576 7.6201C12.5567 7.41917 12.2842 7.30629 12 7.30629C11.7158 7.30629 11.4433 7.41917 11.2424 7.6201C11.0415 7.82103 10.9286 8.09355 10.9286 8.37771V9.45257C10.2024 9.48055 9.51137 9.77268 8.98533 10.2741C8.45929 10.7755 8.1344 11.4518 8.07168 12.1758C8.00896 12.8998 8.21272 13.6218 8.6447 14.2062C9.07667 14.7907 9.70715 15.1973 10.4177 15.3497L12.9429 15.9017C13.2017 15.9574 13.4307 16.107 13.5858 16.3216C13.7408 16.5362 13.811 16.8005 13.7826 17.0638C13.7543 17.327 13.6295 17.5704 13.4324 17.7471C13.2352 17.9238 12.9796 18.0212 12.7149 18.0206H11.2851C11.0635 18.0209 10.8472 17.9525 10.6661 17.8248C10.4849 17.6971 10.3478 17.5163 10.2737 17.3074C10.2304 17.1704 10.16 17.0434 10.0667 16.9341C9.9733 16.8249 9.85891 16.7355 9.73029 16.6713C9.60168 16.6072 9.46147 16.5695 9.31801 16.5607C9.17456 16.5518 9.03078 16.5719 8.89526 16.6198C8.75973 16.6677 8.63522 16.7423 8.52914 16.8393C8.42305 16.9363 8.33756 17.0536 8.27776 17.1843C8.21795 17.315 8.18506 17.4564 8.18102 17.6C8.17699 17.7437 8.20191 17.8867 8.25429 18.0206C8.4558 18.5899 8.81347 19.091 9.2864 19.4666C9.75932 19.8422 10.3284 20.0772 10.9286 20.1446V21.2349C10.9286 21.519 11.0415 21.7915 11.2424 21.9925C11.4433 22.1934 11.7158 22.3063 12 22.3063C12.2842 22.3063 12.5567 22.1934 12.7576 21.9925C12.9586 21.7915 13.0714 21.519 13.0714 21.2349V20.1446C13.8279 20.0586 14.5293 19.707 15.0508 19.1525C15.5724 18.5979 15.8804 17.8763 15.9199 17.116C15.9593 16.3557 15.7278 15.6061 15.2665 15.0004C14.8052 14.3948 14.144 13.9725 13.4006 13.8086L10.8754 13.2566C10.6706 13.2146 10.4887 13.0978 10.3654 12.9289C10.2421 12.76 10.1863 12.5511 10.2088 12.3432C10.2313 12.1353 10.3305 11.9433 10.4871 11.8047C10.6437 11.6661 10.8463 11.5908 11.0554 11.5937H12.7149C12.9367 11.5926 13.1533 11.6607 13.3346 11.7885C13.5159 11.9164 13.6528 12.0975 13.7263 12.3069C13.826 12.5681 14.0239 12.78 14.2777 12.8974C14.5316 13.0147 14.8212 13.0282 15.0848 12.9348C15.3484 12.8415 15.5651 12.6488 15.6886 12.3979C15.8121 12.147 15.8326 11.8578 15.7457 11.592C15.5445 11.0227 15.1868 10.5216 14.7138 10.1462C14.2408 9.77083 13.6716 9.53637 13.0714 9.46971V8.37771Z"
+                          fill="#00BB6B"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_165_2">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <fm-rating
+                    ng-model="$parent.restaurant.price"
+                    symbol="$"
+                    readonly="true"
+                    class="price-dollars"
+                  ></fm-rating>
+                </div>
+                <div>
+                  <fm-rating
+                    ng-model="$parent.restaurant.rating"
+                    readonly="true"
+                    class="rating-stars"
+                  ></fm-rating>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

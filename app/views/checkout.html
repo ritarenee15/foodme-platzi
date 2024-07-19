@@ -1,79 +1,202 @@
-<form name="form">
-  <div class="container fm-panel fm-checkout">
-    <h4>Menu</h4>
+<form class="px-4" name="form">
+  <div class="d-flex align-items-center gap-1 mb-3">
+    <a ng-href="#/menu/{{restaurantId}}">
+      <span>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.875 18.375L4.125 11.625M4.125 11.625L10.875 4.875M4.125 11.625H19.875"
+            stroke="#00BB6B"
+            stroke-width="2.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+      <span class="fw-medium fs-6">Regresar</span>
+    </a>
+  </div>
 
-    <div class="row">
-      <div class="span6">
-        <h5>Deliver To:</h5>
-        <div>{{customer.name}}</div>
-        <div>{{customer.address}}</div>
-        <a href="#/customer">Change</a>
+  <div class="d-flex align-items-center justify-content-between gap-4">
+    <div>
+      <div class="fm-panel w-75">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h5>Deliver To:</h5>
+          <span>{{customer.name}}</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <h5>Delivery address:</h5>
+          <span>{{customer.address}}</span>
+        </div>
+        <!-- <a href="#/customer">Change</a> -->
       </div>
-      <div class="span6">
-        <h5>Payment:</h5>
-        <div class="control-group">
-          <select name="ccType" class="input-medium"
+
+      <div class="fm-panel fm-checkout">
+        <!-- <h4>Menu</h4> -->
+        <div>
+          <!-- <div class="span6"></div> -->
+          <div class="span6">
+            <h5 class="mb-3">Payment</h5>
+            <div class="d-flex align-items-center justify-content-around mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <input
+                  type="radio"
+                  name="radio"
+                  ng-model="cart.payment.type"
+                  value="mastercard"
+                />
+                <div class="cart-image">
+                  <img
+                    src="../img/home/mastercard.png"
+                    alt="tarjeta mastercard"
+                  />
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <input
+                  type="radio"
+                  name="radio"
+                  ng-model="cart.payment.type"
+                  value="visa"
+                />
+                <div class="cart-image">
+                  <img src="../img/home/visa.png" alt="tarjeta visa" />
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <input
+                  type="radio"
+                  name="radio"
+                  ng-model="cart.payment.type"
+                  value="american express"
+                />
+                <div class="cart-image">
+                  <img
+                    src="../img/home/american-express.png"
+                    alt="tarjeta american express"
+                  />
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <input
+                  type="radio"
+                  name="radio"
+                  ng-model="cart.payment.type"
+                  value="discover"
+                />
+                <div class="cart-image">
+                  <img src="../img/home/discover.png" alt="tarjeta discover" />
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-5 mb-2">
+              <div class="d-flex flex-column w-auto">
+                <span>Card Number</span>
+                <input
+                  class="mt-2 box-card-payment"
+                  type="text"
+                  name="ccNum"
+                  placeholder="Card number"
+                  maxlength="16"
                   required
-                  ng-model="cart.payment.type">
-            <option value="visa">Visa</option>
-            <option value="mc">MasterCard</option>
-            <option value="amex">Amex</option>
-            <option value="discover">Discover</option>
-          </select>
+                  ng-pattern="/\d{16}$/"
+                  ng-model="cart.payment.number"
+                  ng-class="{'is-invalid': !isCardNumberValid(cart.payment.number)}"
+                />
+                <span
+                  ng-show="!isCardNumberValid(cart.payment.number)"
+                  class="invalid-feedback"
+                >
+                  Invalid card Number
+                </span>
+              </div>
+              <div class="d-flex flex-column w-25">
+                <span>Expiration date</span>
+                <input
+                  class="mt-2 box-card-payment"
+                  type="text"
+                  name="ccExp"
+                  placeholder="mm/yyyy"
+                  class="input-medium"
+                  maxlength="7"
+                  required
+                  ng-change="formatExpirationDate()"
+                  ng-model="cart.payment.expire"
+                />
+              </div>
+              <div class="d-flex flex-column w-25">
+                <span>CVC</span>
+                <input
+                  class="mt-2 box-card-payment"
+                  type="text"
+                  name="ccCvc"
+                  placeholder="CVC"
+                  class="input-small"
+                  maxlength="3"
+                  required
+                  ng-pattern="/\d{3,4}/"
+                  ng-model="cart.payment.cvc"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="control-group">
-          <input type="text" name="ccNum"
-                 placeholder="Card number"
-                 maxlength="16"
-                 required ng-pattern="/\d{16}/"
-                 ng-model="cart.payment.number">
-        </div>
-        <span class="control-group">
-          <input type="text" name="ccExp" placeholder="mm/yyyy" class="input-medium"
-                 maxlength="16"
-                 required ng-pattern="/\d\d\/\d\d\d\d/"
-                 ng-model="cart.payment.expire">
-        </span>
-        <span class="control-group">
-          <input type="text" name="ccCvc" placeholder="CVC" class="input-small"
-                 maxlength="4"
-                 required ng-pattern="/\d{3,4}/"
-                 ng-model="cart.payment.cvc">
-        </span>
       </div>
     </div>
-
     <div>
-      <table class="table table-hover table-striped">
-        <tr>
-          <th>Qty</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Subtotal</th>
-          <th></th>
-        </tr>
-        <tr ng-repeat="item in cart.items">
-          <td><input type="number" ng-model="item.qty"></td>
-          <td>{{item.name}}</td>
-          <td>{{item.price | currency}}</td>
-          <td>{{item.price * item.qty | currency}}</td>
-          <td><a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a></td>
-        </tr>
-        <tr>
-          <th></th>
-          <th></th>
-          <th>Total:</th>
-          <th>{{ cart.total() | currency }}</th>
-          <th></th>
-        </tr>
-      </table>
+      <div class="fm-panel">
+        <h5 class="mb-3">Summary</h5>
+        <table class="table table-hover table-striped">
+          <tr>
+            <th>Qty</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+          <tr ng-repeat="item in cart.items">
+            <td>{{item.qty}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price | currency}}</td>
+            <td>{{item.price * item.qty | currency}}</td>
+            <td>
+              <a href ng-click="cart.remove(item)"
+                ><i class="icon-remove-sign"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Total</th>
+            <th>{{ cart.total() | currency }}</th>
+            <th></th>
+          </tr>
+        </table>
+      </div>
 
       <div class="fm-right">
-        <a href="#/menu/{{restaurantId}}" class="btn">Back to Menu</a>
-        <a href class="btn btn-danger" ng-click="cart.reset()">Clear Cart</a>
-        <button class="btn btn-primary"
-                ng-disabled="form.$invalid || !cart.items.length || submitting"
-                ng-click="purchase()">Purchase</button>
+        <!-- <a href="#/menu/{{restaurantId}}" class="btn">Back to Menu</a> -->
+        <button
+          href
+          class="btn-checkout btn-clear-cart me-4"
+          ng-click="cart.reset()"
+        >
+          Clear Cart
+        </button>
+        <button
+          class="btn-checkout btn-purcharse-cart"
+          ng-class="{'btn-disabled': form.$invalid || !cart.items.length || submitting, 'btn-purcharse-cart': !(form.$invalid || !cart.items.length || submitting)}"
+          ng-disabled="form.$invalid || !cart.items.length || submitting"
+          ng-click="purchase()"
+        >
+          Purchase
+        </button>
       </div>
     </div>
   </div>

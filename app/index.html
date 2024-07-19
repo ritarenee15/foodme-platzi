@@ -1,59 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="foodMeApp">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Paste New Relic Browser agent here -->
+    <title>FoodMe</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid px-4" ng-controller="NavbarController">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#/">
+            <img
+              class="logo-image"
+              src="./img/home/logo.png"
+              alt="Logo de FoodMe"
+            />
+            <p>Food<span>Me</span></p>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="content-navbar">
+            <div class="d-flex align-items-center gap-1">
+              <span class="content-svg-location">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1.5C9.81276 1.50258 7.71584 2.3726 6.16922 3.91922C4.62261 5.46584 3.75259 7.56276 3.75001 9.75C3.74799 11.5373 4.33179 13.276 5.41201 14.7C5.41201 14.7 5.63701 14.9962 5.67376 15.039L12 22.5L18.3293 15.0353C18.3623 14.9955 18.588 14.7 18.588 14.7L18.5888 14.6978C19.6682 13.2743 20.2517 11.5365 20.25 9.75C20.2474 7.56276 19.3774 5.46584 17.8308 3.91922C16.2842 2.3726 14.1872 1.50258 12 1.5ZM12 12.75C11.4067 12.75 10.8266 12.5741 10.3333 12.2444C9.83995 11.9148 9.45543 11.4462 9.22837 10.8981C9.0013 10.3499 8.94189 9.74667 9.05765 9.16473C9.1734 8.58279 9.45913 8.04824 9.87868 7.62868C10.2982 7.20912 10.8328 6.9234 11.4147 6.80764C11.9967 6.69189 12.5999 6.7513 13.1481 6.97836C13.6962 7.20542 14.1648 7.58994 14.4944 8.08329C14.8241 8.57664 15 9.15666 15 9.75C14.999 10.5453 14.6826 11.3078 14.1202 11.8702C13.5578 12.4326 12.7953 12.749 12 12.75Z"
+                    fill="#00BB6B"
+                  />
+                </svg>
+              </span>
+              <div class="ctg-one d-flex align-items-center gap-0">
+                <p>Perú</p>
+                <span style="width: 22px; height: 30px">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 10L12 15L17 10"
+                      stroke="#00BB6B"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse me-3 bg-form">
+            <form
+              class="form-control d-flex align-items-center bg-form"
+              role="search"
+            >
+              <input
+                class="form-text bg-form"
+                type="search"
+                placeholder="Comida, restaurantes"
+                aria-label="Search"
+              />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.5 14H14.71L14.43 13.73C15.0549 13.0039 15.5117 12.1487 15.7675 11.2256C16.0234 10.3024 16.072 9.33413 15.91 8.38998C15.44 5.60998 13.12 3.38997 10.32 3.04997C9.33559 2.92544 8.33576 3.02775 7.397 3.34906C6.45824 3.67038 5.60542 4.20219 4.90381 4.90381C4.20219 5.60542 3.67038 6.45824 3.34906 7.397C3.02775 8.33576 2.92544 9.33559 3.04997 10.32C3.38997 13.12 5.60998 15.44 8.38998 15.91C9.33413 16.072 10.3024 16.0234 11.2256 15.7675C12.1487 15.5117 13.0039 15.0549 13.73 14.43L14 14.71V15.5L18.25 19.75C18.66 20.16 19.33 20.16 19.74 19.75C20.15 19.34 20.15 18.67 19.74 18.26L15.5 14ZM9.49997 14C7.00997 14 4.99997 11.99 4.99997 9.49997C4.99997 7.00997 7.00997 4.99997 9.49997 4.99997C11.99 4.99997 14 7.00997 14 9.49997C14 11.99 11.99 14 9.49997 14Z"
+                  fill="#919191"
+                />
+              </svg>
+            </form>
+          </div>
+          <div class="content-title" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" ng-class="{active: routeIs('/customer')}">
+                <a class="nav-link active" aria-current="page" href="#/customer"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="nav-item"
+                ng-class="{active: routeIs('/how-it-works')}"
+              >
+                <a class="nav-link" href="#/how-it-works">How it works</a>
+              </li>
+              <li class="nav-item" ng-class="{active: routeIs('/who-we-are')}">
+                <a class="nav-link" href="#/who-we-are">Who we are</a>
+              </li>
+              <li class="nav-item" ng-class="{active: routeIs('/help')}">
+                <a class="nav-link" href="#/help">Help</a>
+              </li>
+            </ul>
+          </div>
+          <!-- <div ng-if="isLoggedIn" class="d-flex align-items-center gap-3">
+            <a class="nav-link">
+              <span>{{getTotalItemsInCart()}}</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 18C15.89 18 15 18.89 15 20C15 20.5304 15.2107 21.0391 15.5858 21.4142C15.9609 21.7893 16.4696 22 17 22C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20C19 19.4696 18.7893 18.9609 18.4142 18.5858C18.0391 18.2107 17.5304 18 17 18ZM1 2V4H3L6.6 11.59L5.24 14.04C5.09 14.32 5 14.65 5 15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H19V15H7.42C7.3537 15 7.29011 14.9737 7.24322 14.9268C7.19634 14.8799 7.17 14.8163 7.17 14.75C7.17 14.7 7.18 14.66 7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.58 17.3 11.97L20.88 5.5C20.95 5.34 21 5.17 21 5C21 4.73478 20.8946 4.48043 20.7071 4.29289C20.5196 4.10536 20.2652 4 20 4H5.21L4.27 2M7 18C5.89 18 5 18.89 5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22C7.53043 22 8.03914 21.7893 8.41421 21.4142C8.78929 21.0391 9 20.5304 9 20C9 19.4696 8.78929 18.9609 8.41421 18.5858C8.03914 18.2107 7.53043 18 7 18Z"
+                  fill="#00BB6B"
+                />
+              </svg>
+            </a>
+            <div
+              class="box-user-image"
+              ng-mouseenter="showDropdown = true"
+              ng-mouseleave="showDropdown = false"
+            >
+              <img
+                src="./img/home/usuario.png"
+                alt="user image"
+                class="user-image"
+              />
+              <div class="mt-1">
+                <ul class="dropdown-menu" ng-show="showDropdown">
+                  <li><a href="#">Configuración</a></li>
+                  <li><a href="#/" ng-click="logout()">Cerrar sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+          <button
+            type="button"
+            class="btn-nav"
+            data-bs-toggle="modal"
+            data-bs-target="#sesionModal"
+          >
+            Ingresar
+          </button>
+        </div>
+      </nav>
+    </header>
 
-  // Paste New Relic Browser agent here
+    <ng-view></ng-view>
 
-  <title>FoodMe</title>
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/bootstrap-united.css">
-</head>
-<body>
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
+    -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<div class="container">
-
-  <div class="navbar" ng-controller="NavbarController">
-    <div class="navbar-inner">
-      <a class="brand" href="#/">FoodMe</a>
-      <ul class="nav">
-        <li ng-class="{active: routeIs('/')}"><a href="#/">Home</a></li>
-        <li ng-class="{active: routeIs('/how-it-works')}"><a href="#/how-it-works">How it works</a></li>
-        <li ng-class="{active: routeIs('/who-we-are')}"><a href="#/who-we-are">Who we are</a></li>
-      </ul>
-
-      <ul class="nav pull-right">
-        <li ng-class="{active: routeIs('/help')}"><a href="#/help">Help</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-  <ng-view></ng-view>
-
-</div>
-
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
--->
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular/angular-resource.js"></script>
-<script src="js/app.js"></script>
-<script src="js/controllers/CheckoutController.js"></script>
-<script src="js/controllers/CustomerController.js"></script>
-<script src="js/controllers/MenuController.js"></script>
-<script src="js/controllers/NavbarController.js"></script>
-<script src="js/controllers/RestaurantsController.js"></script>
-<script src="js/controllers/ThankYouController.js"></script>
-<script src="js/directives/fmDeliverTo.js"></script>
-<script src="js/directives/fmCheckboxList.js"></script>
-<script src="js/directives/fmRating.js"></script>
-<script src="js/services/alert.js"></script>
-<script src="js/services/customer.js"></script>
-<script src="js/services/localStorage.js"></script>
-<script src="js/services/cart.js"></script>
-<script src="js/services/Restaurant.js"></script>
-
-</body>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/CheckoutController.js"></script>
+    <script src="js/controllers/CustomerController.js"></script>
+    <script src="js/controllers/MenuController.js"></script>
+    <script src="js/controllers/NavbarController.js"></script>
+    <script src="js/controllers/RestaurantsController.js"></script>
+    <script src="js/controllers/ThankYouController.js"></script>
+    <script src="js/controllers/ClosePanelController.js"></script>
+    <script src="js/directives/fmDeliverTo.js"></script>
+    <script src="js/directives/fmCheckboxList.js"></script>
+    <script src="js/directives/fmRating.js"></script>
+    <script src="js/services/alert.js"></script>
+    <script src="js/services/customer.js"></script>
+    <script src="js/services/localStorage.js"></script>
+    <script src="js/services/cart.js"></script>
+    <script src="js/services/Restaurant.js"></script>
+    <script src="js/services/AuthService.js"></script>
+    <script src="js/services/CartService.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

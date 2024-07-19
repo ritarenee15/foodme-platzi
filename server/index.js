@@ -1,26 +1,36 @@
 // Uncomment after adding New Relic agent to project
-// const newrelic = require('newrelic');
+//const newrelic = require('newrelic');
 
-const express = require('express');
-const logger = require('pino')();
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+// module loaded before newrelic
+const expressModule = require("express");
+// load the agent
+const newrelic = require("newrelic");
+const express = require("express");
+const logger = require("pino")();
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
 
-const fs = require('fs');
-const open = require('open');
+const fs = require("fs");
+const open = require("open");
 
-const RestaurantRecord = require('./model').Restaurant;
-const MemoryStorage = require('./storage').Memory;
+const RestaurantRecord = require("./model").Restaurant;
+const MemoryStorage = require("./storage").Memory;
 
-const API_URL = '/api/restaurant';
-const API_URL_ID = API_URL + '/:id';
-const API_URL_ORDER = '/api/order';
+const API_URL = "/api/restaurant";
+const API_URL_ID = API_URL + "/:id";
+const API_URL_ORDER = "/api/order";
 
-var removeMenuItems = function(restaurant) {
+// instrument express after the agent has been loaded
+newrelic.instrumentLoadedModule(
+  "express", // the module's name, as a string
+  expressModule // the module instance
+);
+
+var removeMenuItems = function (restaurant) {
   var clone = {};
 
-  Object.getOwnPropertyNames(restaurant).forEach(function(key) {
-    if (key !== 'menuItems') {
+  Object.getOwnPropertyNames(restaurant).forEach(function (key) {
+    if (key !== "menuItems") {
       clone[key] = restaurant[key];
     }
   });
@@ -28,12 +38,12 @@ var removeMenuItems = function(restaurant) {
   return clone;
 };
 
-exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
+exports.start = function (PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
   var app = express();
   var storage = new MemoryStorage();
 
   // log requests
-  app.use(morgan('combined'));
+  app.use(morgan("combined"));
 
   // serve static files for demo client
   app.use(express.static(STATIC_DIR));
@@ -42,11 +52,11 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
   var jsonParser = bodyParser.json();
 
   // API
-  app.get(API_URL, function(req, res, next) {
+  app.get(API_URL, function (req, res, next) {
     res.send(200, storage.getAll().map(removeMenuItems));
   });
 
-  app.post(API_URL, function(req, res, next) {
+  app.post(API_URL, function (req, res, next) {
     var restaurant = new RestaurantRecord(req.body);
     var errors = [];
 
@@ -55,11 +65,11 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
       return res.send(201, restaurant);
     }
 
-    return res.send(400, {error: errors});
+    return res.send(400, { error: errors });
   });
 
-  app.post(API_URL_ORDER, jsonParser, function(req, res, next) {
-    logger.info(req.body, 'checkout');
+  app.post(API_URL_ORDER, jsonParser, function (req, res, next) {
+    logger.info(req.body, "checkout");
 
     /*************************************
     /*         Custom attributes         *
@@ -67,11 +77,11 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
     var order = req.body;
     var itemCount = 0;
     var orderTotal = 0;
-    order.items.forEach(function(item) { 
+    order.items.forEach(function(item) {
       itemCount += item.qty;
       orderTotal += item.price * item.qty;
     });
-    
+
     newrelic.addCustomAttributes({
       'customer': order.deliverTo.name,
       'restaurant': order.restaurant.name,
@@ -80,18 +90,20 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
     });
     /*************************************/
 
-    return res.send(201, { orderId: Date.now()});
+    return res.send(201, { orderId: Date.now() });
   });
 
-  app.get(API_URL_ID, function(req, res, next) {
+  app.get(API_URL_ID, function (req, res, next) {
     var restaurant = storage.getById(req.params.id);
     if (restaurant) {
       return res.send(200, restaurant);
     }
-    return res.send(400, {error: 'No restaurant with id "' + req.params.id + '"!'});
+    return res.send(400, {
+      error: 'No restaurant with id "' + req.params.id + '"!',
+    });
   });
 
-  app.put(API_URL_ID, function(req, res, next) {
+  app.put(API_URL_ID, function (req, res, next) {
     var restaurant = storage.getById(req.params.id);
     var errors = [];
 
@@ -106,24 +118,26 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
       return res.send(201, restaurant);
     }
 
-    return res.send(400, {error: errors});
+    return res.send(400, { error: errors });
   });
 
-  app.del(API_URL_ID, function(req, res, next) {
+  app.delete(API_URL_ID, function (req, res, next) {
     if (storage.deleteById(req.params.id)) {
       return res.send(204, null);
     }
-    return res.send(400, {error: 'No restaurant with id "' + req.params.id + '"!'});
+    return res.send(400, {
+      error: 'No restaurant with id "' + req.params.id + '"!',
+    });
   });
 
   // read the data from json and start the server
-  fs.readFile(DATA_FILE, function(err, data) {
-    JSON.parse(data).forEach(function(restaurant) {
+  fs.readFile(DATA_FILE, function (err, data) {
+    JSON.parse(data).forEach(function (restaurant) {
       storage.add(new RestaurantRecord(restaurant));
     });
 
-    app.listen(PORT, function() {
-      open('http://localhost:' + PORT + '/');
+    app.listen(PORT, function () {
+      open("http://localhost:" + PORT + "/");
       // console.log('Go to http://localhost:' + PORT + '/');
     });
   });
@@ -131,12 +145,11 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
   // Windows and Node.js before 0.8.9 would crash
   // https://github.com/joyent/node/issues/1553
   try {
-    process.on('SIGINT', function() {
+    process.on("SIGINT", function () {
       // save the storage back to the json file
-      fs.writeFile(DATA_FILE, JSON.stringify(storage.getAll()), function() {
+      fs.writeFile(DATA_FILE, JSON.stringify(storage.getAll()), function () {
         process.exit(0);
       });
     });
   } catch (e) {}
-
 };

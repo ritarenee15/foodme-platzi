@@ -7,3 +7,6 @@ build.xml
 .settings
 .idea/*
 node_modules/
+
+# Local Netlify folder
+.netlify
